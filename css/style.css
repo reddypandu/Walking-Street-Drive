@@ -4138,10 +4138,13 @@ input[type="button"].btn-block {
 
 @media(max-width:575px){
    .walk .cImg{
-    object-fit: scale-down;
+    object-fit: contain;
+     position: absolute;
+    top:0;
    }
    .walk{
-    max-height: 300px;
+    max-height: 350px;
+    object-fit: cover;
    }
    .na .logo{
     width: 100px;
@@ -4154,7 +4157,7 @@ input[type="button"].btn-block {
     max-height: 10px;
   }
   #header-carousel{
-    height: 420px;
+    max-height: 420px;
   }
 }
 @media(max-width:992px){
@@ -6424,9 +6427,16 @@ button.bg-dark:focus {
 .d-table-row {
   display: table-row !important;
 }
+.Ci{
+  min-height: 100vh;
+}
 @media(max-width:992px){
   .T{
     display: none;
+  }
+  .Ci{
+    min-height: 300px;
+
   }
 }
 .d-table-cell {
@@ -9696,7 +9706,11 @@ h6,
 }
 
 .bg-appointment {
-  background: linear-gradient(rgba(33, 30, 28, 0.7), rgba(33, 40, 28, 0.7)), url(img/kitchen1.jpg), no-repeat center center;
+  /* background: linear-gradient(rgba(33, 30, 28, 0.7), rgba(33, 40, 28, 0.7)), url(img/kitchen1.jpg), no-repeat center center;
+  background-size: cover; */
+  background-image: url(/img/landing_slider_3.JPG);
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
