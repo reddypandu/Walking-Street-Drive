@@ -61,7 +61,8 @@ body {
   line-height: 1.5;
   color: #757575;
   text-align: left;
-  background-color:#151e27;
+  /* background-color:#151e27; */
+  background-color: black;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -4027,8 +4028,7 @@ input[type="button"].btn-block {
   display: block;
 }
 .na{
-  position: absolute;
-  padding-top: 4rem;
+  background-color: #cc8b35;
 }
 .na .logo{
   width: 200px;
