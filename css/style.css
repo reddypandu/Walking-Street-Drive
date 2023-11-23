@@ -41,7 +41,7 @@
  */
 
  @font-face {
-  font-family: Fontfabric;
+  font-family: "Fontfabric nexa rust sans shadow";
   src: url("https://uploads-ssl.webflow.com/61f53606a22f7e1a572993f6/61f57a26ea314066e7dc4a8f_Fontfabric - Nexa Rust Sans Black Shadow.otf")
   format("opentype");
 }
@@ -408,18 +408,18 @@ h1, h2, h3, h4, h5, h6,
   font-weight: 500;
   line-height: 1.2;
   color: #cc8b35;
-  font-family: Fontfabric; 
+  font-family: "Fontfabric nexa rust sans shadow"; 
 }
 
 h1, .h1 {
   font-size: 4rem;
- font-family: Fontfabric; 
+ font-family: "Fontfabric nexa rust sans shadow"; 
 }
 
 @media (max-width: 1200px) {
   h1, .h1 {
     font-size: calc(1.375rem + 1.5vw) ;
-    font-family: Fontfabric;
+    font-family: "Fontfabric nexa rust sans shadow";
   }
 }
 
