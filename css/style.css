@@ -8,7 +8,7 @@
 
  @font-face {
   font-family: Fontfabric;
-  src: url("/fonts/Fontfabric\ -\ Nexa\ Rust\ Sans\ Black\ Shadow.otf");
+  src: url("/fonts/Fontfabric\ -\ Nexa\ Rust\ Sans\ Black\ Shadow.otf") format('otf');
 }
 
 :root {
@@ -4166,6 +4166,7 @@ input[type="button"].btn-block {
 
 .walk .cImg{
    object-fit: cover;
+   
 }
 #header-carousel{
   height: 100vh;
@@ -4386,6 +4387,9 @@ input[type="button"].btn-block {
   .navbar-expand-xl .navbar-toggler {
     display: none;
   }
+  /* .carousel-item{
+    padding-top: 30px;
+  } */
 }
 
 .navbar-expand {
