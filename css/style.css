@@ -4144,7 +4144,7 @@ input[type="button"].btn-block {
    .walk .cImg{
     object-fit: cover;
     max-width: 100%;
-    max-height: 60vh;
+    max-height: 50vh;
    }
    .walk{
     object-fit: cover;
@@ -4162,14 +4162,14 @@ input[type="button"].btn-block {
     max-height: 10px;
   }
   #header-carousel{
-    height: 60vh;
+    height: 50vh;
   }
 }
 @media(max-width:768px){
   .walk .cImg{
-   object-fit: cover;
+   object-fit: scale-down;
    max-width: 100%;
-   max-height: 80vh;
+   max-height: 70vh;
   }
   .walk{
    object-fit: cover;
@@ -4187,7 +4187,7 @@ input[type="button"].btn-block {
    max-height: 10px;
  }
  #header-carousel{
-   height: 80vh;
+   height: 70vh;
  }
  .carousel-item{
   object-fit: cover;
