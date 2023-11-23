@@ -82,7 +82,7 @@
 
 <body>
     <!-- Topbar Start -->
-    <div class="container-fluid d-none d-lg-block T" style="position: absolute">
+    <div class="container-fluid d-none d-lg-block T" style="background-color: #cc8b35;">
         <div class="row py-2 px-lg-5">
             <div class="col-lg-6 text-left mb-2 mb-lg-0">
                 <div class="d-inline-flex align-items-center">
@@ -115,7 +115,7 @@
     <!-- Topbar End -->
 
     <!-- Navbar Start -->
-    <div class="container-fluid na pt-4">
+    <div class="container-fluid na pt-2">
         <nav class="navbar navbar-expand-lg navbar-light py-3 py-lg-0 px-lg-5" style="background-color: transparent">
             <a href="index.html" class="navbar-brand ml-lg-3">
                 <img class="logo" src="./img/logo_white.png" alt="" />
@@ -141,7 +141,8 @@
             </div> -->
                     <a href="contact.html" class="nav-item nav-link">CONTACT</a>
                 </div>
-                <a href="" class="btn btn-primary d-none d-lg-block" style="border: 1px solid white;">Booking</a>
+                <a href="#appointment" class="btn btn-primary d-none d-lg-block"
+                    style="border: 1px solid white;">Booking</a>
             </div>
         </nav>
     </div>
@@ -725,11 +726,11 @@
         <div id="calendar"></div>
     </div>
     <!-- Service Start -->
-    <div class="container-fluid px-0 py-5 my-5">
+    <div class="container-fluid px-0 py-2 my-2" id="appointment" style="background-color: #cc8b35;">
         <div class="row justify-content-center bg-appointment mx-0">
-            <div class="col-lg-6 py-5">
+            <div class="col-lg-6 py-2">
                 <div class="p-5 my-5">
-                    <h1 class="text-center mb-4">Make Appointment</h1>
+                    <h1 class="text-center mb-2" style="color: white;">Make a Appointment</h1>
                     <form>
                         <div class="form-row">
                             <div class="col-sm-6">
@@ -773,7 +774,8 @@
                                 </div>
                             </div>
                             <div class="col-sm-6">
-                                <button class="btn btn-primary btn-block" type="submit" style="height: 47px;">Book A
+                                <button class="btn btn-primary btn-block" type="submit"
+                                    style="height: 47px;background-color: white;color: #cc8b35;">Book A
                                     Table</button>
                             </div>
                         </div>
@@ -1165,7 +1167,7 @@
                                 style="top: -6px; right: 0"></i>
                             <div class="d-flex align-items-center mb-3">
                                 <img class="img-fluid rounded-circle" src="img/testimonial-1.jpg"
-                                    style="width: 60px; height: 60px" alt="" />
+                                    style="width: 60px; height: 60px;object-fit: cover;" alt="" />
                                 <div class="ml-3">
                                     <h6 class="text-uppercase">Zafar</h6>
                                     <span>Profession</span>
@@ -1182,7 +1184,7 @@
                                 style="top: -6px; right: 0"></i>
                             <div class="d-flex align-items-center mb-3">
                                 <img class="img-fluid rounded-circle" src="img/testimonial-2.jpg"
-                                    style="width: 60px; height: 60px" alt="" />
+                                    style="width: 60px; height: 60px;object-fit: cover;" alt="" />
                                 <div class="ml-3">
                                     <h6 class="text-uppercase">Rajesh</h6>
                                     <span>Profession</span>
@@ -1346,6 +1348,9 @@
     <script>
         AOS.init();
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js"
+        integrity="sha512-v/wOVTkoU7mXEJC3hXnw9AA6v32qzpknvuUF6J2Lbkasxaxn2nYcl+HGB7fr/kChGfCqubVr1n2sq1UFu3Gh1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 
 </html>
