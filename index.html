@@ -113,9 +113,36 @@
         </div>
     </div>
     <!-- Topbar End -->
+    <style>
+        .navbar-toggler {
+            /* box-shadow: 0 1px 0 #cc8b35,
+                0 2px 0 #cc8b35,
+                0 3px 0 #cc8b35,
+                0 4px 0 #cc8b35,
+                0 5px 0 #cc8b35,
+                0 6px 1px rgba(0, 0, 0, .1),
+                0 0 5px rgba(0, 0, 0, .1),
+                0 1px 3px rgba(0, 0, 0, .3),
+                0 3px 5px rgba(0, 0, 0, .2),
+                0 5px 10px rgba(0, 0, 0, .25),
+                0 10px 10px rgba(0, 0, 0, .2),
+                0 20px 20px rgba(0, 0, 0, .15); */
+            box-shadow: 2px 3px 20px white;
+            border-radius: 20%;
+            background-color: white;
+            outline: 0;
+        }
 
+        .navbar-toggler:focus {
+            outline: 0;
+        }
+
+        .navbar-toggler span {
+            font-size: 10px;
+        }
+    </style>
     <!-- Navbar Start -->
-    <div class="container-fluid na pt-2">
+    <div class="container-fluid na pt-0">
         <nav class="navbar navbar-expand-lg navbar-light py-3 py-lg-0 px-lg-5" style="background-color: transparent">
             <a href="index.html" class="navbar-brand ml-lg-3">
                 <img class="logo" src="./img/logo_white.png" alt="" />
@@ -129,7 +156,7 @@
                     <a href="about.html" class="nav-item nav-link">ABOUT</a>
                     <a href="gallery.html" class="nav-item nav-link">GALLERY</a>
                     <a href="entertainment.html" class="nav-item nav-link">ENTERTAINMENT</a>
-                    <a href="opening.html" class="nav-item nav-link">OPEN HOURS</a>
+                    <!-- <a href="opening.html" class="nav-item nav-link">OPEN HOURS</a> -->
                     <!-- <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">More</a>
                         <div class="dropdown-menu rounded-0 m-0">
@@ -141,8 +168,8 @@
             </div> -->
                     <a href="contact.html" class="nav-item nav-link">CONTACT</a>
                 </div>
-                <a href="#appointment" class="btn btn-primary d-none d-lg-block"
-                    style="border: 1px solid white;">Booking</a>
+                <a href="#appointment" class="btn d-none d-lg-block"
+                    style="border: 1px solid white;font-weight: 900;">BOOKING</a>
             </div>
         </nav>
     </div>
@@ -357,7 +384,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6" data-aos="fade-up">
                     <!-- <h6 class="d-inline-block text-primary text-uppercase bg-light py-1 px-2">Unisex Salon</h6> -->
-                    <h1 class="mb-4" style="font-family: Fontfabric nexa rust sans shadow, sans-serif;">Walking Street
+                    <h1 class="mb-4">Walking Street
                     </h1>
                     <p>Revive the Joy of the Open Road with Every Bite!</p>
                     <p>
@@ -721,12 +748,10 @@
     </div>
 
     <div class="container-fluid p-0 v">
-        <div class="row">
-            <div class="col-12 pb-5 pb-lg-0" data-aos="fade-up">
-                <div class="layout21_image-wrapper">
-                    <video style="width: 100%; height: 100%; object-fit: cover" autoplay="" loop="" muted=""
-                        src="https://assets-global.website-files.com/61f53606a22f7e1a572993f6/61f54d8645c6ae311a1261b2_IMG_4448-transcode.webm"></video>
-                </div>
+        <div class="pb-5 pb-lg-0" data-aos="fade-up">
+            <div class="layout21_image-wrapper">
+                <video style="width: 100vw; height: 100%; object-fit: cover" autoplay="" loop="" muted=""
+                    src="https://assets-global.website-files.com/61f53606a22f7e1a572993f6/61f54d8645c6ae311a1261b2_IMG_4448-transcode.webm"></video>
                 <div class="vc text-center">
                     <h3 class="h">Services</h3>
                     <h3 class="text">Wanna know what's here?</h3>
@@ -736,10 +761,9 @@
                 </div>
             </div>
         </div>
+
     </div>
     <style>
-        .v {}
-
         .v .layout21_image-wrapper {
             position: relative;
         }
@@ -781,7 +805,18 @@
             margin-bottom: 10px;
             /* -webkit-text-stroke-color: #cc8b35;
             -webkit-text-stroke-width: 2px; */
-            text-shadow: 2px 6px 2px #eed5b4, 2px 8px 1px #cc8b35;
+            text-shadow: 0 1px 0 #ccc,
+                0 2px 0 #c9c9c9,
+                0 3px 0 #bbb,
+                0 4px 0 #b9b9b9,
+                0 5px 0 #aaa,
+                0 6px 1px rgba(0, 0, 0, .1),
+                0 0 5px rgba(0, 0, 0, .1),
+                0 1px 3px rgba(0, 0, 0, .3),
+                0 3px 5px rgba(0, 0, 0, .2),
+                0 5px 10px rgba(0, 0, 0, .25),
+                0 10px 10px rgba(0, 0, 0, .2),
+                0 20px 20px rgba(0, 0, 0, .15);
         }
 
         @media(max-width:1200px) {
@@ -801,7 +836,18 @@
         @media(max-width:700px) {
             .v .text {
                 font-size: 1.8rem;
-                text-shadow: 2px 3px 2px #eed5b4, 2px 3px 1px #cc8b35;
+                text-shadow: 0 1px 0 #ccc,
+                    0 2px 0 #c9c9c9,
+                    0 3px 0 #bbb,
+                    0 4px 0 #b9b9b9,
+                    0 5px 0 #aaa,
+                    0 6px 1px rgba(0, 0, 0, .1),
+                    0 0 5px rgba(0, 0, 0, .1),
+                    0 1px 3px rgba(0, 0, 0, .3),
+                    0 3px 5px rgba(0, 0, 0, .2),
+                    0 5px 10px rgba(0, 0, 0, .25),
+                    0 10px 10px rgba(0, 0, 0, .2),
+                    0 20px 20px rgba(0, 0, 0, .15);
             }
 
             .v .vc .h {
@@ -817,7 +863,18 @@
         @media(max-width:500px) {
             .v .text {
                 font-size: 1rem;
-                text-shadow: 1px 1px 2px #eed5b4, 1px 2px 1px #cc8b35;
+                text-shadow: 0 1px 0 #ccc,
+                    0 2px 0 #c9c9c9,
+                    0 3px 0 #bbb,
+                    0 4px 0 #b9b9b9,
+                    0 5px 0 #aaa,
+                    0 6px 1px rgba(0, 0, 0, .1),
+                    0 0 5px rgba(0, 0, 0, .1),
+                    0 1px 3px rgba(0, 0, 0, .3),
+                    0 3px 5px rgba(0, 0, 0, .2),
+                    0 5px 10px rgba(0, 0, 0, .25),
+                    0 10px 10px rgba(0, 0, 0, .2),
+                    0 20px 20px rgba(0, 0, 0, .15);
                 margin-top: 5px;
             }
 

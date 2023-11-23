@@ -80,28 +80,25 @@ h6,
     right: 30px;
     bottom: 30px;
     z-index: 11;
-    -webkit-animation: action 1s infinite alternate;
-    animation: action 1s infinite alternate;
+    animation: action 0.5s linear infinite;
 }
 
-@-webkit-keyframes action {
-    0% {
-        transform: translateY(0);
-    }
-
-    100% {
-        transform: translateY(-15px);
-    }
-}
+// @-webkit-keyframes action {
+//    0%,100%{
+//       margin-bottom: 5px;
+//   }
+//   50%{
+//       margin-bottom: 0px;
+//   }
+// }
 
 @keyframes action {
-    0% {
-        transform: translateY(0);
-    }
-
-    100% {
-        transform: translateY(-15px);
-    }
+   0%,100%{
+      margin-bottom: 5px;
+  }
+  50%{
+      margin-bottom: 0px;
+  }
 }
 
 .navbar-light .navbar-nav .nav-link {
