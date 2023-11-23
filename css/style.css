@@ -63,6 +63,7 @@ body {
   text-align: left;
   /* background-color:#151e27; */
   background-color: black;
+  overflow-x: hidden;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -2967,7 +2968,7 @@ fieldset:disabled a.btn {
   padding: 0.5rem 0.9rem;
   font-size: 1rem;
   line-height: 1.5;
-  border-radius: 10px;
+  border-radius: 50%;
 }
 
 .btn-sm, .btn-group-sm > .btn {
