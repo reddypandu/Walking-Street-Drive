@@ -25,6 +25,59 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <!--calender codoe start-->
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar/index.global.min.js'></script>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const calendarEl = document.getElementById('calendar')
+            const calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                eventClick: function (info) {
+                    var eventObj = info.event;
+
+                    if (eventObj.url) {
+                        // alert(
+                        //   'Clicked ' + eventObj.title + '.\n' +
+                        //   'Will open ' + eventObj.url + ' in a new tab'
+                        // );
+
+                        window.open(eventObj.url);
+
+                        info.jsEvent.preventDefault(); // prevents browser from following link in current tab.
+                    } else {
+                        alert('Clicked ' + eventObj.title);
+                    }
+                },
+
+                events: [
+                    {
+                        title: 'Diwali Event-Bookmyshow',
+                        url: 'https://in.bookmyshow.com/events/anubhav-singh-bassi-new-material/ET00355125',
+                        start: '2023-11-10',
+
+                    },
+                    {
+                        title: 'Diwali Event-Paytm Insider',
+                        url: 'https://in.bookmyshow.com/events/anubhav-singh-bassi-new-material/ET00355125',
+                        start: '2023-11-10',
+
+                    },
+                    {
+                        title: 'Diwali Event-Bookmyshow',
+                        url: 'https://in.bookmyshow.com/events/anubhav-singh-bassi-new-material/ET00355125',
+                        start: '2023-11-10',
+
+                    },
+
+                ],
+
+            })
+            calendar.render()
+        })
+
+    </script>
+    <!--calender codoe end-->
 </head>
 
 <body>
@@ -64,10 +117,10 @@
 
 
     <!-- Navbar Start -->
-    <div class="container-fluid p-0" style="background-color: #cc8b35;">
+    <div class="container-fluid na p-0" style="background-color: #cc8b35;">
         <nav class="navbar navbar-expand-lg navbar-light py-3 py-lg-0 px-lg-5">
             <a href="index.html" class="navbar-brand ml-lg-3">
-                <img src="./img/logo_white.png" alt="" style="width:200px" />
+                <img src="./img/logo_white.png" alt="" class="logo" />
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
@@ -90,7 +143,7 @@
                     </div> -->
                     <a href="contact.html" class="nav-item nav-link active">Contact</a>
                 </div>
-                <a href="" class="btn btn-primary d-none d-lg-block">Book Now</a>
+                <a href="" class="btn btn-primary d-none d-lg-block" style="border: 1px solid white;">Book Now</a>
             </div>
         </nav>
     </div>
@@ -113,7 +166,10 @@
     </div>
     <!-- Header End -->
 
-
+    <div class="container calender">
+        <h1 class="text-center">CALENDER</h1>
+        <div id="calendar"></div>
+    </div>
     <!-- Contact Start -->
     <div class="container-fluid py-5">
         <div class="container py-5">
@@ -184,7 +240,7 @@
                     <p><i class="fa fa-map-marker-alt mr-2"></i>Behind Butta Convention,
                         Khanamet, Hitech city, Madhapur, Hyderabad, Telangana 500018</p>
                     <p><i class="fa fa-phone-alt mr-2"></i>+91 96529 03485</p>
-                    <p><i class="fa fa-envelope mr-2"></i>walkingstreet</p>
+                    <p><i class="fa fa-envelope mr-2"></i>walkingstreetdrive-in@gmail.com</p>
                     <div class="d-flex justify-content-start mt-4">
                         <a class="btn btn-lg btn-primary btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-lg btn-primary btn-lg-square mr-2" href="#"><i
@@ -202,25 +258,24 @@
                                 <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
                                 <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About
                                     Us</a>
-                                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our
-                                    Services</a>
-                                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Pricing
-                                    Plan</a>
-                                <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                                <a class="text-white-50 mb-2" href="#"><i
+                                        class="fa fa-angle-right mr-2"></i>Entertainment</a>
+                                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Gallery</a>
+                                <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>Contact
+                                    Us</a>
                             </div>
                         </div>
                         <div class="col-sm-6 mb-5">
-                            <h5 class="text-white text-uppercase mb-4">Our Services</h5>
+                            <h5 class="text-white text-uppercase mb-4">In Our Drive-In</h5>
                             <div class="d-flex flex-column justify-content-start">
-                                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Body
-                                    Massage</a>
-                                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Stone
-                                    Therapy</a>
-                                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Facial
-                                    Therapy</a>
-                                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Skin
-                                    Care</a>
-                                <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>Nail Care</a>
+                                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Tasty
+                                    Food</a>
+                                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Drinks</a>
+                                <a class="text-white-50 mb-2" href="#"><i
+                                        class="fa fa-angle-right mr-2"></i>Photoshoot</a>
+                                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Good
+                                    Environment</a>
+                                <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>Games</a>
                             </div>
                         </div>
                         <div class="col-sm-12 mb-5">
@@ -244,7 +299,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
-                    <p class="m-0 text-white">&copy; <a href="#" style="color:#f9df7a">Walking Street</a>. All
+                    <p class="m-0 text-white">&copy; <a href="#" style="color:#f9df7a">Walking Street Drive-In</a>. All
                         Rights
                         Reserved.</p>
                 </div>

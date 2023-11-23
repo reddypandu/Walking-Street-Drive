@@ -366,7 +366,7 @@ h1, h2, h3, h4, h5, h6,
   margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.2;
-  color: #f9df7a;
+  color: #cc8b35;
 }
 
 h1, .h1 {
@@ -4032,7 +4032,7 @@ input[type="button"].btn-block {
   background-color: #cc8b35;
 }
 .na .logo{
-  width: 200px;
+  width: 180px;
 }
 .navbar {
   display: flex;
@@ -4040,7 +4040,7 @@ input[type="button"].btn-block {
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 1rem;
-  
+  width: 100%;
 }
 .navbar.active{
   position: fixed;
@@ -4048,7 +4048,7 @@ input[type="button"].btn-block {
   top:0;
   z-index: 999;
   width: 100%;
-  background-color: #151e27 !important;
+  background-color: #cc8b35 !important;
 }
 .navbar.active .logo{
   width:150px;
@@ -6195,7 +6195,7 @@ a.close.disabled {
 }
 
 .bg-primary {
-  background-color: #f9df7a !important;
+  background-color: #cc8b35 !important;
 }
 
 a.bg-primary:hover, a.bg-primary:focus,
@@ -9709,10 +9709,10 @@ h6,
 .bg-appointment {
   /* background: linear-gradient(rgba(33, 30, 28, 0.7), rgba(33, 40, 28, 0.7)), url(img/kitchen1.jpg), no-repeat center center;
   background-size: cover; */
-  background-image: url(/img/landing_slider_3.JPG);
+  /* background-image: url(/img/landing_slider_3.JPG);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain; */
 }
 
 .bg-pricing {
