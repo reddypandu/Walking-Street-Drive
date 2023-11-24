@@ -5,7 +5,7 @@
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
- /*
+ 
  @font-face {
   font-family: "Fontfabric nexa rust script l 01";
   src: url("https://uploads-ssl.webflow.com/61f53606a22f7e1a572993f6/61f5575c2dcfa798831a7c38_Fontfabric - Nexa Rust Script L 01.otf")
@@ -14,14 +14,7 @@
   font-style: normal;
   font-display: swap;
 }
-@font-face {
-  font-family: "Fontfabric nexa rust sans shadow";
-  src: url("https://uploads-ssl.webflow.com/61f53606a22f7e1a572993f6/61f57a26ea314066e7dc4a8f_Fontfabric - Nexa Rust Sans Black Shadow.otf")
-    format("opentype");
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
+
 @font-face {
   font-family: "Fontfabric nexa rust sans book 01";
   src: url("https://uploads-ssl.webflow.com/61f53606a22f7e1a572993f6/61f57a262f393942549f65be_Fontfabric - Nexa Rust Sans Book 01.otf")
@@ -38,14 +31,16 @@
   font-style: normal;
   font-display: swap;
 }
- */
+
 
  @font-face {
   font-family: "Fontfabric nexa rust sans shadow";
   src: url("https://uploads-ssl.webflow.com/61f53606a22f7e1a572993f6/61f57a26ea314066e7dc4a8f_Fontfabric - Nexa Rust Sans Black Shadow.otf")
   format("opentype");
 }
-
+.wh{
+  font-family: "Fontfabric nexa rust script l 01";
+}
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -285,7 +280,9 @@ textarea {
   font-size: inherit;
   line-height: inherit;
 }
-
+/* input::placeholder{
+  color: white;
+} */
 button,
 input {
   overflow: visible;
@@ -6382,7 +6379,7 @@ button.bg-dark:focus {
 }
 
 .bg-transparent {
-  background-color: transparent !important;
+  /* background-color: transparent !important; */
 }
 
 .border {
@@ -9808,7 +9805,6 @@ h6,
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  background: rgba(33, 30, 28, 0.5);
   transition: .5s;
   z-index: 1;
 }
