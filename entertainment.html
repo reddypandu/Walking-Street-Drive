@@ -25,6 +25,15 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <!--book table script-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('CjN7Ldk4MGgN7164d');
+        })();
+    </script>
+    <!--book table script-->
 </head>
 
 <body>
@@ -249,35 +258,38 @@
         <div class="col-lg-6 py-5">
             <div class="p-5 my-5" style="background: rgba(33, 30, 28, 0.7);">
                 <h1 class="text-white text-center mb-4">Make Appointment</h1>
-                <form>
+                <form id="bookingForm" class="bookingForm">
                     <div class="form-row">
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <input type="text" class="form-control bg-transparent p-4" placeholder="Your Name"
-                                    required="required" />
+                                <input type="text" class="form-control bg-transparent p-4 fullName"
+                                    placeholder="Your Name" id="fullName" required="required" />
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <input type="email" class="form-control bg-transparent p-4" placeholder="Your Email"
-                                    required="required" />
+                                <input id="mail" type="email" class="form-control bg-transparent p-4 mail"
+                                    placeholder="Your Email" required="required" />
                             </div>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <div class="date" id="date" data-target-input="nearest">
-                                    <input type="text" class="form-control bg-transparent p-4 datetimepicker-input"
-                                        placeholder="Select Date" data-target="#date" data-toggle="datetimepicker" />
+                                <div class="date" data-target-input="nearest">
+                                    <input id="date" type="date" onchange="logInputValue(this)"
+                                        class="form-control bg-transparent p-4 datetimepicker-input date"
+                                        placeholder="Select Date" data-toggle="datetimepicker" />
+
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <div class="time" id="time" data-target-input="nearest">
-                                    <input type="text" class="form-control bg-transparent p-4 datetimepicker-input"
-                                        placeholder="Select Time" data-target="#time" data-toggle="datetimepicker" />
+                                <div class="time" data-target-input="nearest">
+                                    <input id="time" type="time"
+                                        class="form-control bg-transparent p-4 datetimepicker-input time"
+                                        placeholder="Select Time" data-toggle="datetimepicker" />
                                 </div>
                             </div>
                         </div>
@@ -285,13 +297,14 @@
                     <div class="form-row">
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <input type="text" class="form-control bg-transparent p-4" placeholder="Message"
-                                    required="required" />
+                                <input id="message" type="text" class="form-control bg-transparent p-4 message"
+                                    placeholder="Message" required="required" />
                             </div>
                         </div>
                         <div class="col-sm-6">
-                            <button class="btn btn-primary btn-block" type="submit" style="height: 47px;">Make
-                                Appointment</button>
+                            <button class="btn btn-primary btn-block" type="submit"
+                                style="height: 47px;background-color: white;color: #cc8b35;">Book A
+                                Table</button>
                         </div>
                     </div>
                 </form>
@@ -496,6 +509,75 @@
         })();
     </script>
     <!--End of Tawk.to Script-->
+    <script>
+        //book appointment
+
+        document
+            .getElementById("bookingForm")
+            .addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                var fullName = document.getElementById("fullName").value;
+                var email = document.getElementById("mail").value;
+                var date = document.getElementById("date").value;
+                var time = document.getElementById("time").value;
+                var message = document.getElementById("message").value;
+
+                console.log("date==>", date);
+                console.log("time==>", time);
+                var contact = "+919652903485";
+
+                var encodedMessage = encodeURIComponent(
+                    "Name: " +
+                    fullName +
+                    "\n" +
+                    "Email: " +
+                    email +
+                    "\n" +
+                    "Date: " +
+                    date +
+                    "\n" +
+                    "Time: " +
+                    time +
+                    "\n" +
+                    "Message: " +
+                    message
+                );
+
+                // Check if user is on a mobile device
+                if (
+                    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+                        navigator.userAgent
+                    )
+                ) {
+                    // Mobile device, open WhatsApp
+                    var whatsappLink = `whatsapp://send?phone=${contact}&text=${encodedMessage}`;
+                    window.open(whatsappLink, "_blank");
+                } else {
+                    // Desktop device, open default email client
+                    emailjs
+                        .send("service_brwv9fe", "template_5tzwgfs", {
+                            from_name: fullName,
+                            to_name: "Walk-In Street",
+                            message: `Booking on ${date} at ${time}
+    Message : ${message}
+    Reply to ${email}`,
+                            reply_to: email,
+                        })
+                        .then(
+                            function (response) {
+                                alert("Mail Sent");
+                                console.log("response==>", response);
+                                // You can redirect or perform other actions after successful email sending
+                            },
+                            function (error) {
+                                alert("Error Sending Mail");
+                                console.log("error==>", error);
+                            }
+                        );
+                }
+            });
+    </script>
 </body>
 
 </html>
