@@ -36,17 +36,17 @@
             <div class="d-inline-flex align-items-center">
                 <a class="text-primary px-2" href="tel:+9196529
                 03485">
-                    <i class="fas fa-phone-alt" style="color: #fff;"></i>
+                    <i class="fas fa-phone-alt" style="color: #fff !important;"></i>
                 </a>
                 <a class="text-primary px-2" href="https://www.instagram.com/walkingstreet_hyderabad/?hl=en">
-                    <i class="fab fa-instagram" style="color: white;"></i>
+                    <i class="fab fa-instagram" style="color: #fff !important;"></i>
                 </a>
                 <a class="text-primary px-2"
                     href="https://www.google.com/maps/place/Walking+Street+Drive-In/@17.4583295,78.3842465,17z/data=!3m1!4b1!4m6!3m5!1s0x3bcb91d11bf95e83:0xbf25fbbf624cee9f!8m2!3d17.4583244!4d78.3868214!16s%2Fg%2F11sd3vlfmb?authuser=0&entry=ttu">
-                    <i class="fas fa-map-marker-alt" style="color:#fff;"></i>
+                    <i class="fas fa-map-marker-alt" style="color:#fff !important;"></i>
                 </a>
                 <a class="text-primary pl-2" href="https://www.youtube.com/@walkingstreet6793">
-                    <i class="fab fa-youtube" style="color: white;"></i>
+                    <i class="fab fa-youtube" style="color: #fff !important;"></i>
                 </a>
             </div>
         </div>
@@ -139,15 +139,32 @@
             display: none;
             transition: all 3s ease-in-out;
             text-align: center;
+            background-color: white;
+            padding: 10px;
         }
 
         .dropdown-content img {
             width: 200px;
-            height: 300px;
-            object-fit: scale-down;
+            height: 200px;
+        }
+
+        .grid-list {}
+
+        .dropdown-content .drop {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+        .dropdown-content .drop .drop1 {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
         }
     </style>
-    <div class="container-fluid px-lg-5">
+    <div class="container-fluid px-lg-5" style="border-bottom: 1px solid #cc8b35;">
         <div class="list">
             <ul style="display: flex;justify-content: center;align-items: center;flex-wrap: wrap;">
                 <button class="button" onclick="filterItems('all')">All</button>
@@ -157,15 +174,27 @@
                 <button class="button" onclick="filterItems('category4')">Inhouse Facilities</button>
             </ul>
         </div>
-        <ul class="grid-list"
-            style="display: flex;flex-direction: column;justify-content: center;align-items: flex-start;">
+        <ul class="grid-list">
             <li class="item" data-category="category1">
                 <h3 class="collection-item">Alcoholic Events -
                 </h3>
                 <div class="dropdown-content">
-                    <img src="img/alcohol1.jpg" alt="" />
-                    <img src="img/drinks2.jpg" alt="" />
-                    <img src="img/drinks3.jpg" alt="" />
+                    <div class="drop">
+                        <div class="drop1">
+                            <h6>Wine Tasting Event:</h6>
+                            <p>A gathering where participants sample and evaluate different wines.</p>
+                            <p>Wine tasting stations, wine pairing with cheeses, discussions about wine regions and
+                                varieties.</p>
+                            <h6>Beer Festival:</h6>
+                            <p>An event celebrating different types of beers from various breweries.</p>
+                            <p>Beer tastings, live music, food pairings, brewery tours, and beer-related games.</p>
+                        </div>
+                        <div>
+                            <img src="img/alcohol1.jpg" alt="" />
+                            <img src="img/drinks2.jpg" alt="" />
+                            <img src="img/drinks3.jpg" alt="" />
+                        </div>
+                    </div>
                 </div>
             </li>
             <li class="item" data-category="category1">
@@ -203,7 +232,7 @@
             <li class="item" data-category="category3">
                 <h3 class='collection-item'>Receptions -
                 </h3>
-                <div class="dropdown-content">\
+                <div class="dropdown-content">
                     <img src="img/wedding1.jpg" alt="" />
                     <img src="img/wedding3.jpg" alt="" />
                     <img src="img/functions1.jpg" alt="" />
@@ -221,7 +250,7 @@
             <li class="item" data-category="category1">
                 <h3 class='collection-item'>Press Meets -
                 </h3>
-                <div class="dropdown-content">\
+                <div class="dropdown-content">
                     <img src="img/interviews1.jpg" alt="" />
                     <img src="img/meetings1.jpg" alt="" />
                     <img src="img/meeting4.jpg" alt="" />
@@ -230,7 +259,7 @@
             <li class="item" data-category="category1">
                 <h3 class='collection-item'>Pre-Release Meets -
                 </h3>
-                <div class="dropdown-content">\
+                <div class="dropdown-content">
                     <img src="img/meeting2.jpg" alt="" />
                     <img src="img/meetings1.jpg" alt="" />
                     <img src="img/meeting4.jpg" alt="" />
@@ -239,7 +268,7 @@
             <li class="item" data-category="category1">
                 <h3 class='collection-item'>Success Meets -
                 </h3>
-                <div class="dropdown-content">\
+                <div class="dropdown-content">
                     <img src="img/meeting2.jpg" alt="" />
                     <img src="img/meetings1.jpg" alt="" />
                     <img src="img/meeting4.jpg" alt="" />
@@ -248,7 +277,7 @@
             <li class="item" data-category="category1">
                 <h3 class='collection-item'>Festival Events -
                 </h3>
-                <div class="dropdown-content">\
+                <div class="dropdown-content">
                     <img src="img/event.jpg" alt="" />
                     <img src="img/event2.jpg" alt="" />
                     <img src="img/event3.jpg" alt="" />
@@ -257,7 +286,7 @@
             <li class="item" data-category="category3">
                 <h3 class='collection-item'>Surprise Parties -
                 </h3>
-                <div class="dropdown-content">\
+                <div class="dropdown-content">
                     <img src="img/meeting2.jpg" alt="" />
                     <img src="img/meetings1.jpg" alt="" />
                     <img src="img/meeting4.jpg" alt="" />
@@ -266,7 +295,7 @@
             <li class="item" data-category="category1">
                 <h3 class='collection-item'>Corporate Events -
                 </h3>
-                <div class="dropdown-content">\
+                <div class="dropdown-content">
                     <img src="img/meeting2.jpg" alt="" />
                     <img src="img/meetings1.jpg" alt="" />
                     <img src="img/meeting4.jpg" alt="" />
@@ -275,7 +304,7 @@
             <li class="item" data-category="category1">
                 <h3 class='collection-item'>Freshers/Farewells -
                 </h3>
-                <div class="dropdown-content">\
+                <div class="dropdown-content">
                     <img src="img/meeting2.jpg" alt="" />
                     <img src="img/meetings1.jpg" alt="" />
                     <img src="img/meeting4.jpg" alt="" />
@@ -401,7 +430,7 @@
                 </h3>
                 <div class="dropdown-content">\
                     <img src="img/axe-throwing.JPG" alt="" />
-                    <video src="img/axeThrowing.mp4" width="300" height="300" autoplay>
+                    <video src="img/axeThrowing.mp4" width="300" height="300" autoplay muted>
 
                     </video>
                 </div>
@@ -418,7 +447,7 @@
                 <h3 class='collection-item'>VR Games -
                 </h3>
                 <div class="dropdown-content">\
-                    <video src="img/vr.mp4" width="300" height="300" autoplay>
+                    <video src="img/vr.mp4" width="300" height="300" autoplay muted>
 
                     </video>
                 </div>
@@ -721,6 +750,20 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <!--chatbot script-->
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/6560ec7aba9fcf18a80e9f46/1hg19ng29';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
 
 </body>
 
