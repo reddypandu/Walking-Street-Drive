@@ -964,67 +964,7 @@
         <h1 class="text-center">CALENDER</h1>
         <div id="calendar"></div>
     </div>
-    <!-- Service Start -->
-    <div class="container-fluid px-0 py-2 my-2" id="appointment" style="background-color: #cc8b35;">
-        <div class="row justify-content-center bg-appointment mx-0">
-            <div class="col-lg-6 py-2">
-                <div class="p-5 my-5">
-                    <h1 class="text-center mb-2" style="color: white;">Make an Appointment</h1>
-                    <form id="bookingForm" class="bookingForm">
-                        <div class="form-row">
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <input type="text" class="form-control bg-transparent p-4 fullName"
-                                        placeholder="Your Name" id="fullName" required="required" />
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <input id="mail" type="email" class="form-control bg-transparent p-4 mail"
-                                        placeholder="Your Email" required="required" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <div class="date" data-target-input="nearest">
-                                        <input id="date" type="date" onchange="logInputValue(this)"
-                                            class="form-control bg-transparent p-4 datetimepicker-input date"
-                                            placeholder="Select Date" data-toggle="datetimepicker" />
 
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <div class="time" data-target-input="nearest">
-                                        <input id="time" type="time"
-                                            class="form-control bg-transparent p-4 datetimepicker-input time"
-                                            placeholder="Select Time" data-toggle="datetimepicker" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <input id="message" type="text" class="form-control bg-transparent p-4 message"
-                                        placeholder="Message" required="required" />
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <button class="btn btn-primary btn-block" type="submit"
-                                    style="height: 47px;background-color: white;color: #cc8b35;">Book A
-                                    Table</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Service End -->
     <style>
         @media(max-width:575px) {
             .calender {
@@ -1266,7 +1206,67 @@
         </div>
     </div>
     <!-- Testimonial End -->
+    <!-- Service Start -->
+    <div class="container-fluid px-0 py-2 my-2" id="appointment">
+        <div class="row justify-content-center bg-appointment mx-0">
+            <div class="col-lg-6 py-2">
+                <div class="p-5 my-5">
+                    <h1 class="text-center mb-2" style="color: white;">Make an Appointment</h1>
+                    <form id="bookingForm" class="bookingForm">
+                        <div class="form-row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control bg-transparent p-4 fullName"
+                                        placeholder="Your Name" id="fullName" required="required" />
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input id="mail" type="email" class="form-control bg-transparent p-4 mail"
+                                        placeholder="Your Email" required="required" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <div class="date" data-target-input="nearest">
+                                        <input id="date" type="date" onchange="logInputValue(this)"
+                                            class="form-control bg-transparent p-4 datetimepicker-input date"
+                                            placeholder="Select Date" data-toggle="datetimepicker" />
 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <div class="time" data-target-input="nearest">
+                                        <input id="time" type="time"
+                                            class="form-control bg-transparent p-4 datetimepicker-input time"
+                                            placeholder="Select Time" data-toggle="datetimepicker" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input id="message" type="text" class="form-control bg-transparent p-4 message"
+                                        placeholder="Message" required="required" />
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <button class="btn btn-primary btn-block" type="submit"
+                                    style="height: 47px;background-color: white;color: #cc8b35;">Book A
+                                    Table</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
     <!-- Footer Start -->
     <div class="footer container-fluid position-relative py-5" style="margin-top: 90px" id="footer">
         <div class="container pt-5">
