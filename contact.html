@@ -369,6 +369,10 @@
 
                 // console.log("date==>", date);
                 // console.log("time==>", time);
+                if (!name || !email || !subject || !message) {
+                    alert("Please fill in all fields before submitting.");
+                    return;
+                }
                 var contact = "+919652903485";
 
                 var encodedMessage = encodeURIComponent(
