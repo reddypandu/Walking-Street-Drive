@@ -192,30 +192,27 @@
                             <div class="form-row">
                                 <div class="col-sm-6 control-group">
                                     <input type="text" class="form-control border-0 p-4" id="name"
-                                        placeholder="Your Name" required="required"
-                                        data-validation-required-message="Please enter your name" />
+                                        placeholder="Your Name" required />
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="col-sm-6 control-group">
                                     <input type="email" class="form-control border-0 p-4" id="email"
-                                        placeholder="Your Email" required="required"
-                                        data-validation-required-message="Please enter your email" />
+                                        placeholder="Your Email" required />
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
                             <div class="control-group">
-                                <input type="text" class="form-control border-0 p-4" id="subject" placeholder="Subject"
-                                    required="required" data-validation-required-message="Please enter a subject" />
+                                <input type="subject" class="form-control border-0 p-4" id="subject"
+                                    placeholder="Subject" required />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="control-group">
                                 <textarea class="form-control border-0 py-3 px-4" rows="3" id="message"
-                                    placeholder="Message" required="required"
-                                    data-validation-required-message="Please enter your message"></textarea>
+                                    placeholder="Message" required></textarea>
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div>
-                                <button class="btn btn-primary py-3 px-4" type="submit" id="sendMessageButton">Send
+                                <button class="btn btn-primary py-3 px-4" type="submit">Send
                                     Message</button>
                             </div>
                         </form>
@@ -365,28 +362,24 @@
             .addEventListener("submit", function (event) {
                 event.preventDefault();
 
-                var fullName = document.getElementById("fullName").value;
-                var email = document.getElementById("mail").value;
-                var date = document.getElementById("date").value;
-                var time = document.getElementById("time").value;
+                var name = document.getElementById("name").value;
+                var email = document.getElementById("email").value;
+                var subject = document.getElementById("subject").value;
                 var message = document.getElementById("message").value;
 
-                console.log("date==>", date);
-                console.log("time==>", time);
+                // console.log("date==>", date);
+                // console.log("time==>", time);
                 var contact = "+919652903485";
 
                 var encodedMessage = encodeURIComponent(
                     "Name: " +
-                    fullName +
+                    name +
                     "\n" +
                     "Email: " +
                     email +
                     "\n" +
-                    "Date: " +
-                    date +
-                    "\n" +
-                    "Time: " +
-                    time +
+                    "Subject: " +
+                    subject +
                     "\n" +
                     "Message: " +
                     message
@@ -405,11 +398,14 @@
                     // Desktop device, open default email client
                     emailjs
                         .send("service_brwv9fe", "template_9voan49", {
-                            from_name: fullName,
+                            from_name: name,
                             to_name: "Walk-In Street",
-                            message: `Booking on ${date} at ${time}
-        Message : ${message}
-        Reply to ${email}`,
+                            message: `${name} wants to contact you :
+                            Name: ${name}
+                            Subject: ${subject}
+                            Message: ${message}
+                            Reply to: ${email}
+                            `,
                             reply_to: email,
                         })
                         .then(
