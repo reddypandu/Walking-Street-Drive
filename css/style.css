@@ -10123,7 +10123,7 @@ h6,
 .back-to-top {
   position: fixed;
   display: none;
-  right: 40px;
+  right: 35px;
   bottom: 120px;
   z-index: 11;
   animation: action 1s infinite alternate;
@@ -10344,4 +10344,8 @@ h6,
 
 .icons-white {
   color: #fff !important;
+}
+.icons-white:hover {
+  background-color: white;
+  color: #cc8b35 !important;
 }
