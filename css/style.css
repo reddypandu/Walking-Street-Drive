@@ -4348,17 +4348,20 @@ input[type="button"].btn-block {
 }
 .navbar {
   display: flex;
+  position: fixed;
   flex-wrap: wrap;
+  left: 0;
+  top: 0;
+  z-index: 999;
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 1rem;
+  transition: background-color 0.5s ease;
   width: 100%;
 }
 .navbar.active {
   position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 999;
+
   width: 100%;
   background-color: #cc8b35 !important;
 }
@@ -10158,9 +10161,9 @@ h6,
 
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active {
-  color: #f9df7a;
+  color: #fff;
   border: 1px solid white;
-  background-color: white;
+  background-color: #ff9130;
 }
 
 @media (max-width: 991.98px) {
