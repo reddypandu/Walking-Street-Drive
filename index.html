@@ -122,7 +122,7 @@
         <nav class="navbar navbar-expand-lg navbar-light py-3 py-lg-2 px-lg-0" style="background-color: transparent">
             <!-- <div style="scale: 1.4; background-color: #cc8b35;" class="logo-container"> -->
             <a href="index.html" class="navbar-brand ml-lg-3">
-                <img class="logo" src="./img/logo_white.png" alt="" />
+                <img class="logo" src="./img/logo_white.png" alt="" style="background-color: #cc8b35;" />
             </a>
             <!-- </div> -->
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -145,8 +145,8 @@
                     <a href="testimonial.html" class="dropdown-item">TESTIMONIAL</a>
                 </div>
             </div> -->
-                    <a href="contact.html" class="nav-item nav-link">CONTACT</a>
                     <a href="booking.html" class="nav-item nav-link">BOOKING</a>
+                    <a href="contact.html" class="nav-item nav-link">CONTACT US</a>
                 </div>
 
             </div>
@@ -358,7 +358,9 @@
 -->
 
 
-    <div class="container-fluid w2" style="background-image: url('./img/');">
+
+    <div class="container-fluid w2 walking">
+        <div class="wimage"></div>
         <div class="container py-5">
             <div class="row align-items-center">
                 <div class="col-lg-6" data-aos="fade-up">
@@ -374,7 +376,7 @@
                         wanting more. From precision gun shooting to the ancient art of
                         axe throwing and cutting-edge virtual reality games, we've got it
                         all!
-                    </p>
+                        </ps>
                     <p style="color: white;">
                         We understand that all the excitement can work up an appetite. Our
                         concession stands offer a delectable array of snacks,
@@ -396,16 +398,11 @@
                         </div>
                     </div> -->
                 </div>
-                <div class="col-lg-6 pb-5 pb-lg-0" data-aos="fade-up">
-                    <div style="
-                width: 100%;
-                height: 65%;
-                border-radius: 0;
-                overflow: hidden;
-              " class="layout21_image-wrapper">
-                        <video style="width: 100%; height: 700px; object-fit: cover" src="./img/walking_street.mp4"
-                            loop="" muted="" autoplay=""></video>
-                    </div>
+                <div class="col-lg-6 pb-5 pb-lg-0 wD" data-aos="fade-up">
+
+                    <video style="width: 100%; height: 100%; object-fit: cover" src="./img/walking_street.mp4" loop=""
+                        muted="" autoplay=""></video>
+
                 </div>
             </div>
         </div>
@@ -578,7 +575,113 @@
         </div>
     </div> -->
     <!-- About Start -->
-    <div class="container-fluid py-5">
+    <style>
+        .walking {
+            position: relative;
+        }
+
+        .walking .wimage {
+            background-image: url('img/about-background-2.JPG');
+            background-size: cover;
+            filter: blur(5px);
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-position: center;
+        }
+
+        .walking .wD {
+            height: 300px;
+            max-width: 500px;
+            position: relative;
+            left: 100px;
+        }
+
+
+        .trigger .tD {
+            height: 300px;
+            max-width: 500px;
+            position: relative;
+            left: 100px;
+        }
+
+        .virtual .vD {
+            height: 400px;
+            max-width: 500px;
+            position: relative;
+            left: 100px;
+        }
+
+        .kids {
+            position: relative;
+        }
+
+        .kids .kimage {
+            background-image: url('img/kids4.jpg');
+            background-size: cover;
+            filter: blur(5px);
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-position: center;
+        }
+
+        .kids .kD {
+            height: 400px;
+            max-width: 500px;
+            position: relative;
+            left: 100px;
+        }
+
+        @media(max-width:1150px) {
+            .trigger .tD {
+                left: 0px;
+            }
+
+            .virtual .vD {
+                left: 0px;
+            }
+
+            .kids .kD {
+                left: 0px;
+            }
+
+            .walking .wD {
+                left: 0px;
+            }
+        }
+
+        @media(max-width:992px) {
+            .walking .wD {
+                height: 100%;
+                max-width: 100%;
+                left: 0px;
+            }
+
+            .trigger .tD {
+                height: 100%;
+                max-width: 100%;
+                left: 0px;
+                text-align: center;
+            }
+
+            .virtual .vD {
+                height: 100%;
+                max-width: 100%;
+                left: 0px;
+            }
+
+            .kids .kD {
+                height: 100%;
+                max-width: 100%;
+                left: 0px;
+
+            }
+        }
+    </style>
+
+    <div class="container-fluid py-5 trigger"
+        style="background-image: url('img/trigger-background.JPG');background-position: center;background-repeat: no-repeat;background-size: cover;">
         <div class="container py-5">
             <div class="row align-items-center">
                 <div class="col-lg-6" data-aos="fade-up">
@@ -608,7 +711,7 @@
                         </div>
                     </div> -->
                 </div>
-                <div class="col-lg-6 pb-5 pb-lg-0" data-aos="fade-up">
+                <div class="col-lg-6 pb-5 pb-lg-0 tD" data-aos="fade-up">
                     <video style="width: 100%; height: 100%; object-fit: cover" autoplay="" loop="" muted=""
                         src="./img/trigger.mp4"></video>
                 </div>
@@ -617,15 +720,10 @@
     </div>
 
     <!-- About End -->
-    <div class="container-fluid py-5">
+    <div class="container-fluid py-5 virtual"
+        style="background-image: url('img/vr-back.JPG');background-position: center;background-repeat: no-repeat;background-size: cover;">
         <div class="container py-5">
             <div class="row align-items-center">
-                <div class="col-lg-6 pb-5 pb-lg-0" data-aos="fade-up">
-                    <div class="layout21_image-wrapper">
-                        <video style="width: 100%; height: 100%; object-fit: cover" autoplay="" loop="" muted=""
-                            src="./img/vr.mp4"></video>
-                    </div>
-                </div>
                 <div class="col-lg-6" data-aos="fade-up">
                     <h1 class="mb-4 wh">Virtual Reality Games?</h1>
                     <p style="color: white;font-weight: 600;">
@@ -638,6 +736,12 @@
                         transport you to another dimension, delivering an unparalleled
                         level of excitement
                     </p>
+                </div>
+                <div class="col-lg-6 pb-5 pb-lg-0 vD" data-aos="fade-up">
+
+                    <video style="width: 100%; height: 100%; object-fit: cover" autoplay="" loop="" muted=""
+                        src="./img/vr.mp4"></video>
+
                 </div>
             </div>
         </div>
@@ -740,7 +844,8 @@
         }
     </style> -->
     <!-- About End -->
-    <div class="container-fluid py-5">
+    <div class="container-fluid py-5 kids">
+        <div class="kimage"></div>
         <div class="container py-5">
             <div class="row align-items-center">
                 <div class="col-lg-6" data-aos="fade-up">
@@ -760,11 +865,11 @@
                         for your family in our vibrant Kids Zone!
                     </p>
                 </div>
-                <div class="col-lg-6 pb-5 pb-lg-0" data-aos="fade-up">
-                    <div class="layout21_image-wrapper">
-                        <video style="width: 100%; height: 100%; object-fit: cover" autoplay="" loop="" muted=""
-                            src="./img/kidsZone.mp4"></video>
-                    </div>
+                <div class="col-lg-6 pb-5 pb-lg-0 kD" data-aos="fade-up">
+
+                    <video style="width: 100%; height: 100%; object-fit: cover" autoplay="" loop="" muted=""
+                        src="./img/kidsZone.mp4"></video>
+
                 </div>
             </div>
         </div>
