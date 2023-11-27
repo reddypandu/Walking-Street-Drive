@@ -29,7 +29,7 @@
 
 <body>
     <!-- Topbar Start -->
-    <div class="container-fluid d-lg-block pt-2" style="background-color: #cc8b35;">
+    <!-- <div class="container-fluid d-lg-block pt-2" style="background-color: #cc8b35;">
         <div class="col-12 text-center">
             <div class="d-inline-flex align-items-center">
                 <a class="text-primary px-2" href="tel:+9196529
@@ -48,7 +48,7 @@
                 </a>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Topbar End -->
     <!-- Navbar Start -->
@@ -108,11 +108,12 @@
     <div class="container-fluid px-0 py-5 my-5">
         <div class="row mx-0 justify-content-center text-center">
             <div class="col-lg-6">
-                <h6 class="d-inline-block bg-light text-primary text-uppercase py-1 px-2">Entertainment Games</h6>
-                <h1>You loved</h1>
+                <h6 class="d-inline-block bg-light text-primary text-uppercase py-1 px-2">About Us</h6>
+                <h1>Drive-In</h1>
             </div>
         </div>
-        <div class="container-fluid py-5">
+        <div class="container-fluid py-5 walking">
+            <div class="wimage"></div>
             <div class="container py-5">
                 <div class="row align-items-center">
                     <div class="col-lg-6">
@@ -149,22 +150,37 @@
                             </div>
                         </div> -->
                     </div>
-                    <div class="col-lg-6 pb-5 pb-lg-0">
-                        <div style="
-                    width: 100%;
-                    height: 65%;
-                    border-radius: 0;
-                    overflow: hidden;
-                  " class="layout21_image-wrapper">
-                            <video style="width: 100%; height: 700px; object-fit: cover" src="./img/walking_street.mp4"
-                                loop="" muted="" autoplay=""></video>
-                        </div>
+                    <div class="col-lg-6 pb-5 pb-lg-0 wD">
+                        <video style="width: 100%; height: 100%; object-fit: cover" src="./img/walking_street.mp4"
+                            loop="" muted="" autoplay=""></video>
+
                     </div>
                 </div>
             </div>
         </div>
         <!-- About End -->
+        <style>
+            .walking {
+                position: relative;
+            }
 
+            .walking .wimage {
+                background-image: url('img/about-background-2.JPG');
+                background-size: cover;
+                filter: blur(5px);
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background-position: center;
+            }
+
+            .walking .wD {
+                height: 300px;
+                max-width: 500px;
+                position: relative;
+                left: 100px;
+            }
+        </style>
 
         <!-- Team Start -->
         <div class="container-fluid py-5">
