@@ -4543,8 +4543,8 @@ input[type="button"].btn-block {
     font-size: 10px;
   }
   .carousel-indicators li {
-    max-width: 10px;
-    max-height: 10px;
+    width: 40px;
+    height: 20px;
   }
   #header-carousel {
     max-height: 60vh;
@@ -4566,8 +4566,8 @@ input[type="button"].btn-block {
     font-size: 10px;
   }
   .carousel-indicators li {
-    max-width: 10px;
-    max-height: 10px;
+    width: 40px;
+    height: 18px;
   }
   #header-carousel {
     height: 70vh;
@@ -10213,8 +10213,8 @@ h6,
 }
 
 .carousel-indicators li {
-  width: 12px;
-  height: 12px;
+  width: 40px;
+  height: 20px;
   margin: 0 5px 10px 5px;
   background: transparent;
   border: 1px solid #ffffff;
