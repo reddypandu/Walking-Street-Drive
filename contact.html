@@ -155,14 +155,17 @@
     <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
     <!-- Header Start -->
-    <div class="jumbotron jumbotron-fluid" style="margin-bottom: 90px;background-color:#000;">
+    <div class="jumbotron jumbotron-fluid" style="background-color:#000;">
         <div class="container text-center py-5">
-            <h3 class="text-white display-3 mb-4">Contact</h3>
-            <div class="d-inline-flex align-items-center text-white">
+            <h3 class="display-3 mb-4"
+                style="font-family: GOLDDROPS PERSONAL USE;text-shadow: 2px 2px 2px white,2px 2px 2px white;color: #cc8b35;">
+                Contact
+            </h3>
+            <!-- <div class="d-inline-flex align-items-center text-white">
                 <p class="m-0"><a class="text-white" href="">Home</a></p>
                 <i class="far fa-circle px-3"></i>
                 <p class="m-0">Contact</p>
-            </div>
+            </div> -->
         </div>
     </div>
     <!-- Header End -->
@@ -184,7 +187,7 @@
 
     <div class="container calender">
 
-        <h1 class="text-center">CALENDER</h1>
+        <!-- <h1 class="text-center">CALENDER</h1> -->
         <div id="calendar"></div>
     </div>
     <!-- Contact Start -->
@@ -204,7 +207,9 @@
                 <div class="col-lg-6 pt-5 pb-lg-5">
                     <div class="contact-form bg-light p-4 p-lg-5 my-lg-5">
                         <h6 class="d-inline-block text-white text-uppercase bg-primary py-1 px-2">Contact</h6>
-                        <h1 class="mb-4">Contact For Any Query</h1>
+                        <h1 class="mb-4"
+                            style="font-family: GOLDDROPS PERSONAL USE;text-shadow: 2px 2px 2px white,2px 2px 2px white;">
+                            Contact For Any Query</h1>
                         <div id="success"></div>
                         <form name="sentMessage" id="contactForm" novalidate="novalidate">
                             <div class="form-row">
@@ -242,31 +247,58 @@
     <!-- Contact End -->
 
 
+    <style>
+        .footer {
+            position: relative;
+        }
+
+        .footer .fimage {
+            background-image: url('img/crackers2.jpg');
+            background-size: cover;
+            filter: blur(5px);
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-position: center;
+        }
+    </style>
     <!-- Footer Start -->
-    <div class="footer container-fluid position-relative py-5" style="margin-top: 90px;">
+    <div class="footer container-fluid position-relative py-5" id="footer">
+        <div class="fimage"></div>
         <div class="container pt-5">
             <div class="row">
                 <div class="col-lg-6 pr-lg-5 mb-5">
                     <a href="index.html" class="navbar-brand">
-                        <img src="./img/logo_transp.png" alt="" style="width:200px" />
+                        <img src="./img/logo_transp.png" alt="" style="width: 200px" />
                     </a>
                     <p></p>
-                    <p><i class="fa fa-map-marker-alt mr-2"></i>Behind Butta Convention,
-                        Khanamet, Hitech city, Madhapur, Hyderabad, Telangana 500018</p>
+                    <p>
+                        <i class="fa fa-map-marker-alt mr-2"></i>Behind Butta Convention,
+                        Khanamet, Hitech city, Madhapur, Hyderabad, Telangana 500018
+                    </p>
                     <p><i class="fa fa-phone-alt mr-2"></i>+91 96529 03485</p>
-                    <p><i class="fa fa-envelope mr-2"></i>walkingstreetdrive-in@gmail.com</p>
+                    <p style="word-break: break-all">
+                        <i class="fa fa-envelope mr-2"></i>walkingstreetdrive-in@gmail.com
+                    </p>
                     <div class="d-flex justify-content-start mt-4">
                         <a class="btn btn-lg btn-primary btn-lg-square mr-2" href="tel:+9196529
-                        03485"><i class="fas fa-phone-alt icons-white" style="color: #fff;"></i></a>
-                        <a class="btn btn-lg btn-primary btn-lg-square mr-2"
-                            href="https://www.youtube.com/@walkingstreet6793"><i class="fab fa-youtube icons-white"
-                                style="color: white;"></i>
+                        03485"><i class="fas fa-phone-alt s icons-white"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square mr-2 "
+                            href="https://www.youtube.com/@walkingstreet6793"><i
+                                class="fab fa-youtube s icons-white"></i>
                             <a class="btn btn-lg btn-primary btn-lg-square mr-2"
                                 href="https://www.google.com/maps/dir/?api=1&destination=Walking+Street+Drive-In&dir_action=navigate">
-                                <i class="fas fa-map-marker-alt icons-white" style="color:#fff;"></i></a>
-                            <a class="btn btn-lg btn-primary btn-lg-square"
-                                href="https://www.instagram.com/theglamourloungesalon/?hl=en"><i
-                                    class="fab fa-instagram icons-white"></i></a>
+                                <i class="fas fa-map-marker-alt s icons-white"></i></a>
+                            <a class="btn btn-lg btn-primary btn-lg-square mr-2 "
+                                href="https://www.instagram.com/walkingstreet_hyderabad/?hl=en"><i
+                                    class="fab fa-instagram s icons-white"></i></a>
+
+                            <style>
+                                .btn.btn-lg.btn-primary.btn-lg-square.mr-2 s:hover {
+                                    background-color: #fff !important;
+                                    color: #cc8b35 !important;
+                                }
+                            </style>
                     </div>
                 </div>
                 <div class="col-lg-6 pl-lg-5">
@@ -274,38 +306,36 @@
                         <div class="col-sm-6 mb-5">
                             <h5 class="text-white text-uppercase mb-4">Quick Links</h5>
                             <div class="d-flex flex-column justify-content-start">
-                                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                                <a class="text-white-50 mb-2" href="about.html"><i
-                                        class="fa fa-angle-right mr-2"></i>About
+                                <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                                <a class="text-white mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>About
                                     Us</a>
-                                <a class="text-white-50 mb-2" href="entertainment.html"><i
+                                <a class="text-white mb-2" href="entertainment.html"><i
                                         class="fa fa-angle-right mr-2"></i>Entertainment</a>
-                                <a class="text-white-50 mb-2" href="gallery.html"><i
+                                <a class="text-white mb-2" href="gallery.html"><i
                                         class="fa fa-angle-right mr-2"></i>Gallery</a>
-                                <a class="text-white-50" href="contact.html"><i
-                                        class="fa fa-angle-right mr-2"></i>Contact
+                                <a class="text-white" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contact
+                                    Us
                                     Us</a>
                             </div>
                         </div>
                         <div class="col-sm-6 mb-5">
                             <h5 class="text-white text-uppercase mb-4">In Our Drive-In</h5>
                             <div class="d-flex flex-column justify-content-start">
-                                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Tasty
+                                <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Tasty
                                     Food</a>
-                                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Drinks</a>
-                                <a class="text-white-50 mb-2" href="#"><i
-                                        class="fa fa-angle-right mr-2"></i>Photoshoot</a>
-                                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Good
+                                <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Drinks</a>
+                                <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Photoshoot</a>
+                                <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Good
                                     Environment</a>
-                                <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>Games</a>
+                                <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Games</a>
                             </div>
                         </div>
                         <div class="col-sm-12 mb-5">
                             <h5 class="text-white text-uppercase mb-4">Newsletter</h5>
                             <div class="w-100">
                                 <div class="input-group">
-                                    <input type="text" class="form-control border-light" style="padding: 30px;"
-                                        placeholder="Your Email Address">
+                                    <input type="text" class="form-control border-light" style="padding: 30px"
+                                        placeholder="Your Email Address" />
                                     <div class="input-group-append">
                                         <button class="btn btn-primary px-4">Sign
                                             Up</button>
@@ -318,23 +348,27 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid text-light border-top py-4" style="border-color: rgba(256, 256, 256, .15) !important;">
+    <div class="container-fluid text-light border-top py-4" style="border-color: rgba(256, 256, 256, 0.15) !important">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
-                    <p class="m-0 text-white">&copy; <a href="#" style="color:#f9df7a">Walking Street Drive-In</a>. All
-                        Rights
-                        Reserved.</p>
+                    <p class="m-0 text-white">
+                        &copy;
+                        <a href="#" style="color: #cc8b35">Walking Street drive-in</a>.
+                        All Rights Reserved.
+                    </p>
                 </div>
                 <div class="col-md-6 text-center text-md-right">
-                    <p class="m-0 text-white">Designed by <a href="https://www.thepatternscompany.com"
-                            style="color:#f9df7a">The
-                            Patterns Company</a></p>
+                    <p class="m-0 text-white">
+                        Designed by
+                        <a href="https://www.thepatternscompany.com" style="color: #cc8b35">The Patterns Company</a>
+                    </p>
                 </div>
             </div>
         </div>
     </div>
     <!-- Footer End -->
+
 
 
     <!-- Back to Top -->

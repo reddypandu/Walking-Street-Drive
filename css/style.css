@@ -14,6 +14,13 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "GOLDDROPS PERSONAL USE";
+  src: url("/fonts/GoldropspersonaluseRegular-9Ynn5.otf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 @font-face {
   font-family: "Fontfabric nexa rust sans book 01";
@@ -431,12 +438,14 @@ h6,
   line-height: 1.2;
   color: #cc8b35;
   font-family: "Fontfabric nexa rust sans shadow";
+  /* font-family: "GOLDDROPS PERSONAL USE"; */
 }
 
 h1,
 .h1 {
   font-size: 4rem;
   font-family: "Fontfabric nexa rust sans shadow";
+  /* font-family: "GOLDDROPS PERSONAL USE"; */
 }
 
 @media (max-width: 1200px) {
@@ -4345,7 +4354,6 @@ input[type="button"].btn-block {
 }
 .na .logo {
   width: 150px;
-  z-index: 1002;
 }
 /* .navbar {
   display: flex;
@@ -4379,25 +4387,21 @@ input[type="button"].btn-block {
   justify-content: space-between;
   padding: 0.5rem 1rem;
   background-image: linear-gradient(90deg, #cc8b35 17%, #22092c 2%);
+  transition: all 10.5s ease;
   width: 100%;
 }
+.navbar.active {
+  position: fixed;
 
-.navbar::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  background-image: linear-gradient(90deg, #22092c 17%, #cc8b35 2%);
-  opacity: 0;
-  transition: opacity 0.5s ease; /* Adjust the transition duration as needed */
+  /* background-color: #cc8b35 !important; */
+  background-image: linear-gradient(90deg, #cc8b35 17%, #22092c 2%);
 }
-
-.navbar.active::before {
-  opacity: 1;
+@media (max-width: 990px) {
+  .navbar {
+    background-image: linear-gradient(90deg, #cc8b35 30%, #22092c 2%);
+  }
 }
-
 .navbar.active .logo {
   width: 150px;
 }
@@ -4478,7 +4482,9 @@ input[type="button"].btn-block {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
-
+.fc-scroller {
+  background-color: #22092c;
+}
 .navbar-collapse {
   flex-basis: 100%;
   flex-grow: 1;
@@ -4575,7 +4581,7 @@ input[type="button"].btn-block {
     top: 0;
     z-index: 999;
     width: 100%;
-    background-color: #cc8b35 !important;
+    background-image: linear-gradient(90deg, #cc8b35 50%, #22092c 2%);
   }
   .na {
     padding-top: 0.5rem;
@@ -10196,8 +10202,7 @@ h6,
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active {
   color: #fff;
-  border: 1px solid white;
-  background-color: #ff9130;
+  background-color: #cc8b35;
 }
 
 @media (max-width: 991.98px) {

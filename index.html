@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="background-color: #000;">
 
 <head>
     <meta charset="utf-8" />
@@ -90,7 +90,7 @@
     <!--calender codoe end-->
 </head>
 
-<body>
+<body id="body">
     <!-- Topbar Start -->
     <!-- <div class="container-fluid d-lg-block pt-2" style="background-color: #cc8b35;"> -->
     <!-- <div class="col-12 text-center">
@@ -120,7 +120,7 @@
     <!-- Navbar Start -->
     <div class="container-fluid na pt-0">
         <nav class="navbar navbar-expand-lg navbar-light py-3 py-lg-2 px-lg-0">
-            <a href="index.html" class="navbar-brand ml-lg-3" style="z-index: 1001;">
+            <a href="index.html" class="navbar-brand ml-lg-3">
                 <img class="logo" src="./img/logo_white.png" alt="" />
             </a>
             <!-- </div> -->
@@ -154,7 +154,7 @@
     <!-- Navbar End -->
 
     <!-- Carousel Start -->
-    <div class="container-fluid p-0 walk">
+    <div class="container-fluid p-5 walk">
         <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#header-carousel" data-slide-to="0" class="active"></li>
@@ -355,21 +355,78 @@
     <!--
     whatsapp logo
 -->
+    <!-- <div class="loader-wrapper">
+        <div class="loader"></div>
+        <p style="color: red;font-size: 200px;">panud</p>
+    </div>
+    <style>
+        body {
+            display: none;
+        }
 
+        .loader-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: #000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
 
+        .loader {
+            border: 8px solid #f3f3f3;
+            border-top: 8px solid #3498db;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
 
-    <div class="container-fluid w2 walking">
-        <div class="wimage"></div>
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .loader-wrapper p {
+            margin-top: 20px;
+
+        }
+    </style> -->
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Simulate loading time
+            setTimeout(function () {
+                document.getElementById("body").style.display = "block";
+                document.querySelector(".loader-wrapper").style.display = "none";
+            }, 2000); // Adjust the time according to your needs
+        });
+    </script> -->
+
+    <div class="container-fluid w2 walking" style="background-image: url('img/crackers1.jpg');">
+        <!-- <div class="wimage container-fluid"></div> -->
         <div class="container py-5">
             <div class="row align-items-center">
                 <div class="col-lg-6" data-aos="fade-up">
                     <!-- <h6 class="d-inline-block text-primary text-uppercase bg-light py-1 px-2">Unisex Salon</h6> -->
-                    <h1 class="mb-4 wh">Walking Street
+                    <h1 class="mb-4 wh"
+                        style="font-family: GOLDDROPS PERSONAL USE;text-shadow: 2px 2px 2px white,2px 2px 2px white;">
+                        Walking Street
                     </h1>
-                    <p style="color: white;font-weight: 600;font-size: 25px;">
-                        A Drive in Like Never Before in Hyderabad!
+                    <p style="color: white;font-weight: 800;font-size: 25px;">
+                        <span style="color:#cc8b35;">"</span>A Drive in Like Never Before in Hyderabad!<span
+                            style="color:#cc8b35;">"</span>
                     </p>
-                    <p style="color: white;font-size: 20px;font-family: Fontfabric nexa rust script l 01;">
+                    <p style="color: white;font-size: 20px;font-weight: 700;">
                         Experience a Thrilling Fusion of Entertainment! At Walking Street,
                         we've redefined the drive-in experience. Prepare for an
                         adrenaline-pumping adventure as we bring you a variety of
@@ -378,7 +435,8 @@
                         axe throwing and cutting-edge virtual reality games, we've got it
                         all!
                         </ps>
-                    <p style="color: white;font-size: 20px;">
+                    <p
+                        style="color: white;font-size: 20px;font-weight: 700;font-family: Fontfabric nexa rust script l 01;">
                         We understand that all the excitement can work up an appetite. Our
                         concession stands offer a delectable array of snacks,
                         refreshments, and meals to keep you energized and satisfied
@@ -416,7 +474,8 @@
                 <h6 class="d-inline-block bg-light text-primary text-uppercase py-1 px-2">
                     Our Kitchens
                 </h6>
-                <h1>KICHENS</h1>
+                <h1 style="font-family: GOLDDROPS PERSONAL USE;text-shadow: 2px 2px 2px white,2px 2px 2px white;">
+                    KICHENS</h1>
             </div>
         </div>
         <div class="owl-carousel service-carousel" data-aos="fade-up">
@@ -592,7 +651,7 @@
         }
 
         .walking .wD {
-            height: 350px;
+            height: 450px;
             max-width: 500px;
             position: relative;
             left: 100px;
@@ -618,7 +677,7 @@
         }
 
         .kids .kimage {
-            background-image: url('img/kids4.jpg');
+            background-image: url('img/kids2.jpg');
             background-size: cover;
             filter: blur(5px);
             position: absolute;
@@ -682,7 +741,9 @@
         <div class="container py-5">
             <div class="row align-items-center">
                 <div class="col-lg-6" data-aos="fade-up">
-                    <h1 class="mb-4 wh">Trigger?</h1>
+                    <h1 class="mb-4 wh"
+                        style="font-family: GOLDDROPS PERSONAL USE;color: #cc8b35;text-shadow: 2px 2px 2px white,2px 2px 2px white;">
+                        Trigger?</h1>
                     <p style="color: white;font-weight: 600;font-size: 25px;">
                         Lock and load for an exhilarating experience at our
                         state-of-the-art gun shooting range.
@@ -722,7 +783,9 @@
         <div class="container py-5">
             <div class="row align-items-center">
                 <div class="col-lg-6" data-aos="fade-up">
-                    <h1 class="mb-4 wh">Virtual Reality Games?</h1>
+                    <h1 class="mb-4 wh"
+                        style="font-family: GOLDDROPS PERSONAL USE;text-shadow: 2px 2px 2px white,2px 2px 2px white;">
+                        Virtual Reality Games?</h1>
                     <p style="color: white;font-weight: 600;font-size: 25px;">
                         Step into a world of limitless possibilities with our cutting-edge
                         virtual reality games!
@@ -846,12 +909,14 @@
         <div class="container py-5">
             <div class="row align-items-center">
                 <div class="col-lg-6" data-aos="fade-up">
-                    <h1 class="mb-4 wh">Kids Play Area?</h1>
-                    <p style="color: white;font-weight: 600;font-size: 25px;">
+                    <h1 class="mb-4 wh"
+                        style="font-family: GOLDDROPS PERSONAL USE;text-shadow: 2px 2px 2px white,2px 2px 2px white;">
+                        Kids Play Area?</h1>
+                    <p style="color:white;font-weight: 700;font-size: 25px;">
                         Welcome to our enchanting Kids Zone, where the magic of childhood
                         comes alive!
                     </p>
-                    <p style="color: white;font-size: 20px;">
+                    <p style="color:white;font-size: 20px;font-weight: bolder;">
                         Immerse your little ones in a world of joy and excitement,
                         specially crafted for our youngest guests. Join us for adventures,
                         discover the thrill of our on-site play areas. Parents, find all
@@ -1065,7 +1130,8 @@
 
     <!-- About End -->
     <div class="container calender">
-        <h1 class="text-center">CALENDER</h1>
+        <h1 class="text-center"
+            style="font-family: GOLDDROPS PERSONAL USE;text-shadow: 2px 2px 2px white,2px 2px 2px white;">CALENDER</h1>
         <div id="calendar"></div>
     </div>
 
@@ -1100,32 +1166,32 @@
                             way to maintain social distancing during the pandemic.
                         </p>
                         <ul class="list-inline">
-                            <li class="h6 py-1">
+                            <li class=" py-1">
                                 <i class="far fa-circle text-primary mr-3"></i>Monday : 12:00
                                 AM - 3:00 PM & 6:00 PM - 11:59 PM
                             </li>
-                            <li class="h6 py-1">
+                            <li class=" py-1">
                                 <i class="far fa-circle text-primary mr-3"></i>Tuesday : 12:00
                                 AM - 3:00 PM & 6:00 PM - 11:59 PM
                             </li>
-                            <li class="h6 py-1">
+                            <li class=" py-1">
                                 <i class="far fa-circle text-primary mr-3"></i>Wednesday :
                                 12:00
                                 AM - 3:00 PM & 6:00 PM - 11:59 PM
                             </li>
-                            <li class="h6 py-1">
+                            <li class=" py-1">
                                 <i class="far fa-circle text-primary mr-3"></i>Thursday :12:00
                                 AM - 3:00 PM & 6:00 PM - 11:59 PM
                             </li>
-                            <li class="h6 py-1">
+                            <li class=" py-1">
                                 <i class="far fa-circle text-primary mr-3"></i>Friday : 12:00
                                 AM - 3:00 PM & 6:00 PM - 11:59 PM
                             </li>
-                            <li class="h6 py-1">
+                            <li class=" py-1">
                                 <i class="far fa-circle text-primary mr-3"></i>Saturday : 12:00
                                 AM - 3:00 PM & 6:00 PM - 11:59 PM
                             </li>
-                            <li class="h6 py-1">
+                            <li class=" py-1">
                                 <i class="far fa-circle text-primary mr-3"></i>Sunday : 12:00
                                 AM - 3:00 PM & 6:00 PM - 11:59 PM
                             </li>
@@ -1147,7 +1213,9 @@
                     <h6 class="d-inline-block bg-light text-primary text-uppercase py-1 px-2">
                         Gallery
                     </h6>
-                    <h1 class="mb-5">Some Customers Pictures</h1>
+                    <h1 class="mb-5"
+                        style="font-family: GOLDDROPS PERSONAL USE;text-shadow: 2px 2px 2px white,2px 2px 2px white;">
+                        Some Customers Pictures</h1>
                 </div>
             </div>
             <div class="row">
@@ -1251,7 +1319,9 @@
                     <h6 class="d-inline-block text-primary text-uppercase bg-light py-1 px-2">
                         Testimonial
                     </h6>
-                    <h1 class="mb-4">Good Eats and Great Vibes!</h1>
+                    <h1 class="mb-4"
+                        style="font-family: GOLDDROPS PERSONAL USE;text-shadow: 2px 2px 2px white,2px 2px 2px white;">
+                        Good Eats and Great Vibes!</h1>
                     <div class="owl-carousel testimonial-carousel">
                         <div class="position-relative">
                             <i class="fa fa-3x fa-quote-right text-primary position-absolute"
@@ -1311,11 +1381,14 @@
     </div>
     <!-- Testimonial End -->
     <!-- Service Start -->
-    <div class="container-fluid px-0 py-2 my-2" id="appointment">
+    <div class="container-fluid px-0 py-2 my-2" id="appointment"
+        style="background-image: url('img/event4.jpg');background-size: cover;background-position: center;">
         <div class="row justify-content-center bg-appointment mx-0">
             <div class="col-lg-6 py-2">
                 <div class="p-5 my-5">
-                    <h1 class="text-center mb-2" style="color: white;">Make an Appointment</h1>
+                    <h1 class="text-center mb-2"
+                        style="font-family: GOLDDROPS PERSONAL USE;text-shadow: 2px 2px 2px white,2px 2px 2px white;">
+                        Make an Appointment</h1>
                     <form id="bookingForm" class="bookingForm">
                         <div class="form-row">
                             <div class="col-sm-6">
@@ -1361,7 +1434,7 @@
                             </div>
                             <div class="col-sm-6">
                                 <button class="btn btn-primary btn-block" type="submit"
-                                    style="height: 47px;background-color: white;color: #cc8b35;">Book A
+                                    style="height: 47px;background-color:#cc8b35;color: white;">Book A
                                     Table</button>
                             </div>
                         </div>
@@ -1371,8 +1444,24 @@
         </div>
     </div>
     <!-- Service End -->
+    <style>
+        .footer {
+            position: relative;
+        }
+
+        .footer .fimage {
+            background-image: url('img/crackers2.jpg');
+            background-size: cover;
+            filter: blur(5px);
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-position: center;
+        }
+    </style>
     <!-- Footer Start -->
-    <div class="footer container-fluid position-relative py-5" style="margin-top: 90px" id="footer">
+    <div class="footer container-fluid position-relative py-5" id="footer">
+        <div class="fimage"></div>
         <div class="container pt-5">
             <div class="row">
                 <div class="col-lg-6 pr-lg-5 mb-5">
@@ -1414,30 +1503,28 @@
                         <div class="col-sm-6 mb-5">
                             <h5 class="text-white text-uppercase mb-4">Quick Links</h5>
                             <div class="d-flex flex-column justify-content-start">
-                                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                                <a class="text-white-50 mb-2" href="about.html"><i
-                                        class="fa fa-angle-right mr-2"></i>About
+                                <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                                <a class="text-white mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>About
                                     Us</a>
-                                <a class="text-white-50 mb-2" href="entertainment.html"><i
+                                <a class="text-white mb-2" href="entertainment.html"><i
                                         class="fa fa-angle-right mr-2"></i>Entertainment</a>
-                                <a class="text-white-50 mb-2" href="gallery.html"><i
+                                <a class="text-white mb-2" href="gallery.html"><i
                                         class="fa fa-angle-right mr-2"></i>Gallery</a>
-                                <a class="text-white-50" href="contact.html"><i
-                                        class="fa fa-angle-right mr-2"></i>Contact Us
+                                <a class="text-white" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contact
+                                    Us
                                     Us</a>
                             </div>
                         </div>
                         <div class="col-sm-6 mb-5">
                             <h5 class="text-white text-uppercase mb-4">In Our Drive-In</h5>
                             <div class="d-flex flex-column justify-content-start">
-                                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Tasty
+                                <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Tasty
                                     Food</a>
-                                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Drinks</a>
-                                <a class="text-white-50 mb-2" href="#"><i
-                                        class="fa fa-angle-right mr-2"></i>Photoshoot</a>
-                                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Good
+                                <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Drinks</a>
+                                <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Photoshoot</a>
+                                <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Good
                                     Environment</a>
-                                <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>Games</a>
+                                <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Games</a>
                             </div>
                         </div>
                         <div class="col-sm-12 mb-5">
