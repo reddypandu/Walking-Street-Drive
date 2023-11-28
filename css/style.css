@@ -14,13 +14,13 @@
   font-style: normal;
   font-display: swap;
 }
-@font-face {
+/* @font-face {
   font-family: "GOLDDROPS PERSONAL USE";
   src: url("/fonts/GoldropspersonaluseRegular-9Ynn5.otf");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-}
+} */
 
 @font-face {
   font-family: "Fontfabric nexa rust sans book 01";
@@ -437,22 +437,22 @@ h6,
   font-weight: 500;
   line-height: 1.2;
   color: #cc8b35;
+  /* font-family: "Fontfabric nexa rust script l 01"; */
   font-family: "Fontfabric nexa rust sans shadow";
-  /* font-family: "GOLDDROPS PERSONAL USE"; */
 }
 
 h1,
 .h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-family: "Fontfabric nexa rust sans shadow";
-  /* font-family: "GOLDDROPS PERSONAL USE"; */
 }
 
 @media (max-width: 1200px) {
   h1,
   .h1 {
     font-size: calc(1.375rem + 1.5vw);
-    font-family: "Fontfabric nexa rust sans shadow";
+    /* font-family: "Fontfabric nexa rust script l 01"; */
+    font-family: "GOLDDROPS PERSONAL USE";
   }
 }
 
@@ -10390,4 +10390,10 @@ h6,
 .icons-white:hover {
   background-color: white;
   color: #cc8b35 !important;
+}
+/*calender*/
+
+#calendar {
+  height: 400px;
+  object-fit: scale-down;
 }
