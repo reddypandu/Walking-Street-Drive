@@ -4390,21 +4390,22 @@ input[type="button"].btn-block {
   background-image: linear-gradient(90deg, #cc8b35 17%, #22092c 2%);
   width: 100%;
 }
-.navbar.active {
+
+/* .navbar.active {
   position: fixed;
 
   width: 100%;
-  /* background-color: #cc8b35 !important; */
+  
   background-image: linear-gradient(90deg, #cc8b35 17%, #22092c 2%);
-}
+} */
 @media (max-width: 990px) {
   .navbar {
-    background-image: linear-gradient(90deg, #cc8b35 35%, #22092c 2%);
+    background-image: linear-gradient(90deg, #cc8b35 38%, #22092c 2%);
   }
 }
-.navbar.active .logo {
+/* .navbar.active .logo {
   width: 150px;
-}
+} */
 .navbar .container,
 .navbar .container-fluid,
 .navbar .container-sm,
@@ -4581,7 +4582,7 @@ input[type="button"].btn-block {
     top: 0;
     z-index: 999;
     width: 100%;
-    background-image: linear-gradient(90deg, #cc8b35 50%, #22092c 2%);
+    /* background-image: linear-gradient(90deg, #cc8b35 50%, #22092c 2%); */
   }
   .na {
     padding-top: 0.5rem;
@@ -10270,7 +10271,29 @@ h6,
   background-repeat: no-repeat;
   background-size: contain; */
 }
-
+.whp {
+  font-size: 25px;
+  font-weight: 800;
+  color: white;
+}
+.wp {
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+}
+@media (max-width: 768px) {
+  .wh {
+    font-size: 2.5rem;
+  }
+  .whp {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .wp {
+    font-size: 15px;
+    font-weight: 550;
+  }
+}
 .bg-pricing {
   background: linear-gradient(rgba(33, 30, 28, 0.7), rgba(33, 40, 28, 0.7)),
     url(../img/carousel-2.jpg), no-repeat center center;
