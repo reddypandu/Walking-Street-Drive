@@ -453,7 +453,7 @@ h1,
   .h1 {
     font-size: calc(1.375rem + 1.5vw);
     /* font-family: "Fontfabric nexa rust script l 01"; */
-    font-family: "GOLDDROPS PERSONAL USE";
+    font-family: "Fontfabric nexa rust sans shadow";
   }
 }
 
@@ -4388,7 +4388,6 @@ input[type="button"].btn-block {
   justify-content: space-between;
   padding: 0.5rem 1rem;
   background-image: linear-gradient(90deg, #cc8b35 17%, #22092c 2%);
-  transition: all 10.5s ease;
   width: 100%;
 }
 .navbar.active {
@@ -4400,7 +4399,7 @@ input[type="button"].btn-block {
 }
 @media (max-width: 990px) {
   .navbar {
-    background-image: linear-gradient(90deg, #cc8b35 30%, #22092c 2%);
+    background-image: linear-gradient(90deg, #cc8b35 35%, #22092c 2%);
   }
 }
 .navbar.active .logo {
