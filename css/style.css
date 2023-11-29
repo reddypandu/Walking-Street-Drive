@@ -4394,17 +4394,17 @@ input[type="button"].btn-block {
   top: 0;
   left: 0;
   width: 100%;
-
   background-image: linear-gradient(90deg, #cc8b35 17%, #22092c 2%);
 }
 @media (max-width: 990px) {
   .navbar {
     background-image: linear-gradient(35deg, #cc8b35 38%, #22092c 2%);
   }
+  .navbar.active {
+    background-image: linear-gradient(35deg, #cc8b35 38%, #22092c 2%);
+  }
 }
-.navbar.active {
-  background-image: linear-gradient(35deg, #cc8b35 38%, #22092c 2%);
-}
+
 .navbar .container,
 .navbar .container-fluid,
 .navbar .container-sm,
