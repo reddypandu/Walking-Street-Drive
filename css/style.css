@@ -444,7 +444,7 @@ h6,
 
 h1,
 .h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-family: "Fontfabric nexa rust sans shadow";
 }
 
@@ -10306,8 +10306,7 @@ h6,
 
 @media (min-width: 992px) {
   .hours-text,
-  .pricing-text,
-  .contact-form {
+  .pricing-text {
     margin-left: -120px;
   }
 }
