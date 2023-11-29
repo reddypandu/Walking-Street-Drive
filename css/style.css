@@ -4351,7 +4351,7 @@ input[type="button"].btn-block {
   display: block;
 }
 .na {
-  background-color: #cc8b35;
+  background-color: #22092c;
 }
 .na .logo {
   width: 150px;
@@ -4379,10 +4379,8 @@ input[type="button"].btn-block {
 
 .navbar {
   display: flex;
-  position: fixed;
   flex-wrap: wrap;
   left: 0;
-  top: 0;
   z-index: 999;
   align-items: center;
   justify-content: space-between;
@@ -4400,7 +4398,7 @@ input[type="button"].btn-block {
 } */
 @media (max-width: 990px) {
   .navbar {
-    background-image: linear-gradient(90deg, #cc8b35 38%, #22092c 2%);
+    background-image: linear-gradient(35deg, #cc8b35 38%, #22092c 2%);
   }
 }
 /* .navbar.active .logo {
