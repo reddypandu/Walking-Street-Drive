@@ -4402,9 +4402,9 @@ input[type="button"].btn-block {
     background-image: linear-gradient(35deg, #cc8b35 38%, #22092c 2%);
   }
 }
-/* .navbar.active .logo {
-  width: 150px;
-} */
+.navbar.active .logo {
+  background-image: linear-gradient(35deg, #cc8b35 38%, #22092c 2%);
+}
 .navbar .container,
 .navbar .container-fluid,
 .navbar .container-sm,
