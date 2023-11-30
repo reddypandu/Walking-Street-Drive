@@ -115,7 +115,7 @@
     <div class="container-fluid na pt-0" style="padding-left: 0;padding-right: 0;">
         <nav class="navbar navbar-expand-lg navbar-light py-3 py-lg-2 px-lg-0">
 
-            <a href="index.html" class="navbar-brand ml-lg-3">
+            <a href="home.html" class="navbar-brand ml-lg-3">
                 <img class="logo" src="./img/logo_white.png" alt="" />
             </a>
 
@@ -126,10 +126,10 @@
             </button>
             <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
                 <div class="navbar-nav m-auto py-0">
-                    <a href="index.html" class="nav-item nav-link">HOME</a>
+                    <a href="home.html" class="nav-item nav-link">HOME</a>
                     <a href="about.html" class="nav-item nav-link">ABOUT</a>
                     <a href="gallery.html" class="nav-item nav-link">GALLERY</a>
-                    <a href="entertainment.html" class="nav-item nav-link">ENTERTAINMENT</a>
+                    <a href="entertainment.html" class="nav-item nav-link">GAMES</a>
                     <a href="whatwehost.html" class="nav-item nav-link">what we host</a>
                     <!-- <a href="opening.html" class="nav-item nav-link">OPEN HOURS</a> -->
                     <!-- <div class="nav-item dropdown">
@@ -142,7 +142,7 @@
                 </div>
             </div> -->
                     <a href="booking.html" class="nav-item nav-link">BOOKING</a>
-                    <a href="#" class="nav-item nav-link active">CONTACT US</a>
+                    <a href="#" class="nav-item nav-link active">EVENT CALENDER</a>
                 </div>
 
             </div>
@@ -160,8 +160,8 @@
     <!-- Header Start -->
     <div class="jumbotron jumbotron-fluid" style="background-color:#000;">
         <div class="container text-center">
-            <h3 class="display-3" style="color: white;font-size: 3rem;">
-                Contact
+            <h3 class="display-3" style="color: white;font-size: 2rem;">
+                Events
             </h3>
             <!-- <div class="d-inline-flex align-items-center text-white">
                 <p class="m-0"><a class="text-white" href="">Home</a></p>
@@ -260,7 +260,7 @@
         <div class="container pt-5">
             <div class="row">
                 <div class="col-lg-6 pr-lg-5 mb-5">
-                    <a href="index.html" class="navbar-brand">
+                    <a href="home.html" class="navbar-brand">
                         <img src="./img/logo_transp.png" class="img img-fluid" alt=""
                             style="width: 400px;margin-bottom: 30px;" />
                     </a>
@@ -392,87 +392,13 @@
         (function () {
             var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
             s1.async = true;
-            s1.src = 'https://embed.tawk.to/6560ec7aba9fcf18a80e9f46/1hg19ng29';
+            s1.src = 'https://embed.tawk.to/656870afff45ca7d47853c0d/1hgfvgcc9';
             s1.charset = 'UTF-8';
             s1.setAttribute('crossorigin', '*');
             s0.parentNode.insertBefore(s1, s0);
         })();
     </script>
-    <!--End of Tawk.to Script-->
-    <!-- <script>
-        //book appointment
 
-        document
-            .getElementById("contactForm")
-            .addEventListener("submit", function (event) {
-                event.preventDefault();
-
-                var name = document.getElementById("name").value;
-                var email = document.getElementById("email").value;
-                var subject = document.getElementById("subject").value;
-                var message = document.getElementById("message").value;
-
-                // console.log("date==>", date);
-                // console.log("time==>", time);
-                if (!name || !email || !subject || !message) {
-                    alert("Please fill in all fields before submitting.");
-                    return;
-                }
-                var contact = "+919652903485";
-
-                var encodedMessage = encodeURIComponent(
-                    "Name: " +
-                    name +
-                    "\n" +
-                    "Email: " +
-                    email +
-                    "\n" +
-                    "Subject: " +
-                    subject +
-                    "\n" +
-                    "Message: " +
-                    message
-                );
-
-                // Check if user is on a mobile device
-                if (
-                    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-                        navigator.userAgent
-                    )
-                ) {
-                    // Mobile device, open WhatsApp
-                    var whatsappLink = `whatsapp://send?phone=${contact}&text=${encodedMessage}`;
-                    window.open(whatsappLink, "_blank");
-                } else {
-                    // Desktop device, open default email client
-                    emailjs
-                        .send("service_brwv9fe", "template_9voan49", {
-                            from_name: name,
-                            to_name: "Walk-In Street",
-                            message: `${name} wants to contact you :
-                            Name: ${name}
-                            Subject: ${subject}
-                            Message: ${message}
-                            Reply to: ${email}
-                            `,
-                            reply_to: email,
-                        })
-                        .then(
-                            function (response) {
-                                alert("Mail Sent");
-                                console.log("response==>", response);
-                                document.getElementById("contactForm").reset();
-
-                                // You can redirect or perform other actions after successful email sending
-                            },
-                            function (error) {
-                                alert("Error Sending Mail");
-                                console.log("error==>", error);
-                            }
-                        );
-                }
-            });
-    </script> -->
     <script>
         // Function to create and show a pop-up message
         function showError(element, message) {
