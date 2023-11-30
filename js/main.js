@@ -117,40 +117,56 @@ $(window).scroll(function () {
 
 //scroll trigger
 
-var tl = gsap.timeline({
-  scrollTrigger: {
-    trigger: "#main",
-    start: "50% 50%",
-    end: "100% 50%",
-    scrub: 2,
-    pin: true,
-  },
+// var tl = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: "#main",
+//     start: "50% 50%",
+//     end: "100% 50%",
+//     scrub: 2,
+//     pin: true,
+//   },
+// });
+// tl.to(
+//   "#top",
+//   {
+//     top: "-50%",
+//   },
+//   "a"
+// )
+//   .to(
+//     "#bottom",
+//     {
+//       bottom: "-50%",
+//     },
+//     "a"
+//   )
+//   .to(
+//     "#top-h",
+//     {
+//       top: "80%",
+//     },
+//     "a"
+//   )
+//   .to(
+//     "#bottom-h",
+//     {
+//       bottom: "-80%",
+//     },
+//     "a"
+//   );
+const a = document.querySelectorAll(".acc");
+
+a.forEach((item) => {
+  const head = item.querySelector(".acc-head");
+  const content = item.querySelector(".acc-content");
+
+  head.addEventListener("click", () => {
+    for (var i = 0; i < a.length; i++) {
+      if (a[i] != item) {
+        a[i].classList.remove("active");
+      } else {
+        item.classList.toggle("active");
+      }
+    }
+  });
 });
-tl.to(
-  "#top",
-  {
-    top: "-50%",
-  },
-  "a"
-)
-  .to(
-    "#bottom",
-    {
-      bottom: "-50%",
-    },
-    "a"
-  )
-  .to(
-    "#top-h",
-    {
-      top: "80%",
-    },
-    "a"
-  )
-  .to(
-    "#bottom-h",
-    {
-      bottom: "-80%",
-    },
-    "a"
-  );

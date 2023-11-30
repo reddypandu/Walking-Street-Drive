@@ -10,7 +10,7 @@
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
-    <link rel="icon" type="image/x-icon" href="img/logo_transp.png" />
+    <link rel="icon" type="image/x-icon" href="img/logo_link.png" class="img img-fluid" />
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -21,7 +21,7 @@
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" class="img img-fluid" />
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
@@ -67,7 +67,7 @@
         <nav class="navbar navbar-expand-lg navbar-light py-3 py-lg-2 px-lg-0">
 
             <a href="index.html" class="navbar-brand ml-lg-3">
-                <img class="logo" src="./img/logo_white.png" alt="" />
+                <img class="logo" src="./img/logo_white.png" alt="" class="img img-fluid" />
             </a>
 
             <!-- </div> -->
@@ -109,8 +109,9 @@
     <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
     <!-- Header Start -->
     <div class="jumbotron jumbotron-fluid " style="background-color: #000;">
-        <div class="container text-center py-5">
+        <div class="container text-center">
             <h3 class="text-white display-3" style="font-size: 3rem;">Services
+
             </h3>
 
         </div>
@@ -137,8 +138,15 @@
         }
 
         .collection-item {
-            border-bottom: 1px solid white;
+
             cursor: pointer;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .collection-item:hover {
+            transform: scaleY(1.1);
+            background-color: rgb(218, 213, 213);
+
         }
 
         .button.active {
@@ -147,7 +155,7 @@
         }
 
         .dropdown-content {
-            display: none;
+
             transition: all 3s ease-in-out;
             text-align: center;
             background-color: white;
@@ -161,7 +169,15 @@
             margin: 3px;
         }
 
-        .grid-list {}
+        .grid-list {
+            padding: 3rem;
+        }
+
+        @media(max-width:992px) {
+            .grid-list {
+                padding: 1rem;
+            }
+        }
 
         .dropdown-content .drop div {
             display: flex;
@@ -177,10 +193,53 @@
             align-items: flex-start;
             flex-direction: column;
         }
+
+        .acc .h3d {
+            padding: 10px;
+            border-bottom: 1px solid white;
+        }
+
+        .acc.active .fa-plus {
+            display: none;
+        }
+
+        .acc.active .fa-minus {
+            display: block;
+        }
+
+        .acc .fa-plus {
+            display: block;
+        }
+
+        .acc .fa-minus {
+            display: none;
+        }
+
+        .acc .acc-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .acc .acc-content {
+            padding: 15px 10px;
+            border: 1px solid #e6e6e6;
+            transition: 0.5s ease;
+            font-size: 16px;
+            font-weight: 560;
+            font-family: sans-serif;
+            transition: 0.5s;
+            display: none;
+        }
+
+        .acc.active .acc-content {
+            display: block;
+        }
     </style>
     <div class="container-fluid px-lg-5 px-sm-0" style="border-bottom: 1px solid #cc8b35;">
         <div class="list">
-            <ul style="display: flex;justify-content: center;align-items: center;flex-wrap: wrap;">
+            <ul style="display: flex;justify-content: center;align-items: center;flex-wrap: wrap;padding: 0;">
                 <button class="button" onclick="filterItems('all')">All</button>
                 <button class="button" onclick="filterItems('category1')">Events</button>
                 <button class="button" onclick="filterItems('category2')">Food</button>
@@ -188,467 +247,573 @@
                 <button class="button" onclick="filterItems('category4')">Inhouse Facilities</button>
             </ul>
         </div>
-        <ul class="grid-list p-0">
-            <li class="item" data-category="category1">
-                <h3 class="collection-item">Alcoholic Events -
-                </h3>
-                <div class="dropdown-content">
-                    <div class="drop">
-                        <!-- <div class="drop1">
-                            <h6>Wine Tasting Event:</h6>
-                            <p>A gathering where participants sample and evaluate different wines.</p>
-                            <p>Wine tasting stations, wine pairing with cheeses, discussions about wine regions and
-                                varieties.</p>
-                            <h6>Beer Festival:</h6>
-                            <p>An event celebrating different types of beers from various breweries.</p>
-                            <p>Beer tastings, live music, food pairings, brewery tours, and beer-related games.</p>
-                        </div> -->
-                        <div>
-                            <img src="img/alcohol1.jpg" alt="" />
-                            <img src="img/drinks2.jpg" alt="" />
-                            <img src="img/drinks3.jpg" alt="" />
-                        </div>
-                    </div>
+        <ul class="grid-list">
+            <li class="item acc" data-category="category1">
+                <div class="h3d">
+                    <h3 class="collection-item acc-head">Alcoholic Events
+                        <i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-minus" aria-hidden="true"></i>
+                    </h3>
                 </div>
-            </li>
-            <li class="item" data-category="category1">
-                <h3 class="collection-item">Non-Alcoholic Events -
-                </h3>
-                <div class="dropdown-content">
-                    <div class="drop">
-                        <div>
-                            <img src="img/food1.jpg" alt="" />
-                            <img src="img/food2.jpg" alt="" />
-                            <img src="img/food3.jpg" alt="" />
-                        </div>
-                    </div>
 
+                <div class="dropdown-content acc-content">
+                    <div class="drop">
+
+                        <div>
+                            <img src="img/alcohol1.jpg" alt="" class="img img-fluid" />
+                            <img src="img/drinks2.jpg" alt="" class="img img-fluid" />
+                            <img src="img/drinks3.jpg" alt="" class="img img-fluid" />
+                        </div>
+                    </div>
                 </div>
             </li>
-            <li class="item" data-category="category1">
-                <h3 class="collection-item">Birthday Parties -
-                </h3>
-                <div class="dropdown-content">
+            <li class="item acc" data-category="category1">
+                <div class="h3d">
+                    <h3 class="collection-item acc-head">Non-Alcoholic Events
+                        <i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-minus" aria-hidden="true"></i>
+                    </h3>
+                </div>
+
+                <div class="dropdown-content acc-content">
                     <div class="drop">
                         <div>
-                            <img src="img/party1.jpg" alt="" />
+                            <img src="img/food1.jpg" alt="" class="img img-fluid" />
+                            <img src="img/food2.jpg" alt="" class="img img-fluid" />
+                            <img src="img/food3.jpg" alt="" class="img img-fluid" />
                         </div>
                     </div>
 
                 </div>
             </li>
-            <li class="item" data-category="category1">
-                <h3 class="collection-item">Family Parties -
-                </h3>
-                <div class="dropdown-content">
+            <li class="item acc" data-category="category1">
+                <div class="h3d">
+                    <h3 class="collection-item acc-head">Birthday Parties
+                        <i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-minus" aria-hidden="true"></i>
+                    </h3>
+                </div>
+
+                <div class="dropdown-content acc-content">
                     <div class="drop">
                         <div>
-                            <img src="img/gallery-4.JPG" />
+                            <img src="img/party1.jpg" alt="" class="img img-fluid" />
                         </div>
                     </div>
 
                 </div>
             </li>
-            <li class="item" data-category="category1">
-                <h3 class='collection-item'>Get-Togethers -
-                </h3>
-                <div class="dropdown-content">
+            <li class="item acc" data-category="category1">
+                <div class="h3d">
+                    <h3 class="collection-item acc-head">Family Parties
+                        <i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-minus" aria-hidden="true"></i>
+                    </h3>
+                </div>
+
+                <div class="dropdown-content acc-content">
                     <div class="drop">
                         <div>
-                            <img src="img/meeting2.jpg" alt="" />
-                            <img src="img/meetings1.jpg" alt="" />
-                            <img src="img/meeting4.jpg" alt="" />
+                            <img src="img/gallery-4.JPG" class="img img-fluid" />
                         </div>
                     </div>
 
                 </div>
             </li>
-            <li class="item" data-category="category3">
-                <h3 class='collection-item'>Receptions -
-                </h3>
-                <div class="dropdown-content">
+            <li class="item acc" data-category="category1">
+                <div class="h3d">
+                    <h3 class='collection-item acc-head'>Get-Togethers -
+                        <i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-minus" aria-hidden="true"></i>
+                    </h3>
+                </div>
+
+                <div class="dropdown-content acc-content">
                     <div class="drop">
                         <div>
-                            <img src="img/wedding1.jpg" alt="" />
-                            <img src="img/wedding3.jpg" alt="" />
-                            <img src="img/functions1.jpg" alt="" />
+                            <img src="img/meeting2.jpg" alt="" class="img img-fluid" />
+                            <img src="img/meetings1.jpg" alt="" class="img img-fluid" />
+                            <img src="img/meeting4.jpg" alt="" class="img img-fluid" />
                         </div>
                     </div>
 
                 </div>
             </li>
-            <li class="item" data-category="category1">
-                <h3 class='collection-item'>Movie Events -
-                </h3>
-                <div class="dropdown-content">
+            <li class="item acc" data-category="category3">
+                <div class="h3d">
+                    <h3 class='collection-item acc-head'>Receptions -
+                        <i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-minus" aria-hidden="true"></i>
+                    </h3>
+                </div>
+
+                <div class="dropdown-content acc-content">
                     <div class="drop">
                         <div>
-                            <img src="img/screenings1.jpg" alt="" />
-                            <img src="img/screning2.jpg" alt="" />
-                            <img src="img/screening3.jpg" alt="" />
+                            <img src="img/wedding1.jpg" alt="" class="img img-fluid" />
+                            <img src="img/wedding3.jpg" alt="" class="img img-fluid" />
+                            <img src="img/functions1.jpg" alt="" class="img img-fluid" />
                         </div>
                     </div>
 
                 </div>
             </li>
-            <li class="item" data-category="category1">
-                <h3 class='collection-item'>Press Meets -
-                </h3>
-                <div class="dropdown-content">
+            <li class="item acc" data-category="category1">
+                <div class="h3d">
+                    <h3 class='collection-item acc-head'>Movie Events
+                        <i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-minus" aria-hidden="true"></i>
+                    </h3>
+                </div>
+
+                <div class="dropdown-content acc-content">
                     <div class="drop">
                         <div>
-                            <img src="img/interviews1.jpg" alt="" />
-                            <img src="img/meetings1.jpg" alt="" />
-                            <img src="img/meeting4.jpg" alt="" />
+                            <img src="img/screenings1.jpg" alt="" class="img img-fluid" />
+                            <img src="img/screning2.jpg" alt="" class="img img-fluid" />
+                            <img src="img/screening3.jpg" alt="" class="img img-fluid" />
                         </div>
                     </div>
 
                 </div>
             </li>
-            <li class="item" data-category="category1">
-                <h3 class='collection-item'>Pre-Release Meets -
-                </h3>
-                <div class="dropdown-content">
+            <li class="item acc" data-category="category1">
+                <div class="h3d">
+                    <h3 class='collection-item acc-head'>Press Meets
+                        <i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-minus" aria-hidden="true"></i>
+                    </h3>
+                </div>
+
+                <div class="dropdown-content acc-content">
                     <div class="drop">
                         <div>
-                            <img src="img/meeting2.jpg" alt="" />
-                            <img src="img/meetings1.jpg" alt="" />
-                            <img src="img/meeting4.jpg" alt="" />
+                            <img src="img/interviews1.jpg" alt="" class="img img-fluid" />
+                            <img src="img/meetings1.jpg" alt="" class="img img-fluid" />
+                            <img src="img/meeting4.jpg" alt="" class="img img-fluid" />
                         </div>
                     </div>
 
                 </div>
             </li>
-            <li class="item" data-category="category1">
-                <h3 class='collection-item'>Success Meets -
-                </h3>
-                <div class="dropdown-content">
+            <li class="item acc" data-category="category1">
+                <div class="h3d">
+                    <h3 class='collection-item acc-head'>Pre-Release Meets
+                        <i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-minus" aria-hidden="true"></i>
+                    </h3>
+                </div>
+
+                <div class="dropdown-content acc-content">
                     <div class="drop">
                         <div>
-                            <img src="img/meeting2.jpg" alt="" />
-                            <img src="img/meetings1.jpg" alt="" />
-                            <img src="img/meeting4.jpg" alt="" />
+                            <img src="img/meeting2.jpg" alt="" class="img img-fluid" />
+                            <img src="img/meetings1.jpg" alt="" class="img img-fluid" />
+                            <img src="img/meeting4.jpg" alt="" class="img img-fluid" />
                         </div>
                     </div>
 
                 </div>
             </li>
-            <li class="item" data-category="category1">
-                <h3 class='collection-item'>Festival Events -
-                </h3>
-                <div class="dropdown-content">
+            <li class="item acc" data-category="category1">
+                <div class="h3d">
+                    <h3 class='collection-item acc-head'>Success Meets
+                        <i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-minus" aria-hidden="true"></i>
+                    </h3>
+                </div>
+
+                <div class="dropdown-content acc-content">
                     <div class="drop">
                         <div>
-                            <img src="img/event.jpg" alt="" />
-                            <img src="img/event2.jpg" alt="" />
-                            <img src="img/event3.jpg" alt="" />
+                            <img src="img/meeting2.jpg" alt="" class="img img-fluid" />
+                            <img src="img/meetings1.jpg" alt="" class="img img-fluid" />
+                            <img src="img/meeting4.jpg" alt="" class="img img-fluid" />
                         </div>
                     </div>
 
                 </div>
             </li>
-            <li class="item" data-category="category3">
-                <h3 class='collection-item'>Surprise Parties -
-                </h3>
-                <div class="dropdown-content">
+            <li class="item acc" data-category="category1">
+                <div class="h3d">
+                    <h3 class='collection-item acc-head'>Festival Events
+                        <i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-minus" aria-hidden="true"></i>
+                    </h3>
+                </div>
+
+                <div class="dropdown-content acc-content">
                     <div class="drop">
                         <div>
-                            <img src="img/meeting2.jpg" alt="" />
-                            <img src="img/meetings1.jpg" alt="" />
-                            <img src="img/meeting4.jpg" alt="" />
+                            <img src="img/event.jpg" alt="" class="img img-fluid" />
+                            <img src="img/event2.jpg" alt="" class="img img-fluid" />
+                            <img src="img/event3.jpg" alt="" class="img img-fluid" />
                         </div>
                     </div>
 
                 </div>
             </li>
-            <li class="item" data-category="category1">
-                <h3 class='collection-item'>Corporate Events -
-                </h3>
-                <div class="dropdown-content">
+            <li class="item acc" data-category="category3">
+                <div class="h3d">
+                    <h3 class='collection-item acc-head'>Surprise Parties
+                        <i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-minus" aria-hidden="true"></i>
+                    </h3>
+                </div>
+
+                <div class="dropdown-content acc-content">
                     <div class="drop">
                         <div>
-                            <img src="img/meeting2.jpg" alt="" />
-                            <img src="img/meetings1.jpg" alt="" />
-                            <img src="img/meeting4.jpg" alt="" />
+                            <img src="img/meeting2.jpg" alt="" class="img img-fluid" />
+                            <img src="img/meetings1.jpg" alt="" class="img img-fluid" />
+                            <img src="img/meeting4.jpg" alt="" class="img img-fluid" />
                         </div>
                     </div>
 
                 </div>
             </li>
-            <li class="item" data-category="category4">
-                <h3 class='collection-item'>Decorations
-                    -
-                </h3>
-                <div class="dropdown-content">
+            <li class="item acc" data-category="category1">
+                <div class="h3d">
+                    <h3 class='collection-item acc-head'>Corporate Events
+                        <i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-minus" aria-hidden="true"></i>
+                    </h3>
+                </div>
+
+                <div class="dropdown-content acc-content">
                     <div class="drop">
                         <div>
-                            <img src="img/event.jpg" alt="" />
-                            <img src="img/dj.jpg" alt="" />
-                            <img src="img/33041.jpg" alt="" />
-                            <img src="img/41082.jpg" alt="" />
+                            <img src="img/meeting2.jpg" alt="" class="img img-fluid" />
+                            <img src="img/meetings1.jpg" alt="" class="img img-fluid" />
+                            <img src="img/meeting4.jpg" alt="" class="img img-fluid" />
                         </div>
                     </div>
 
                 </div>
             </li>
-            <li class="item" data-category="category1">
-                <h3 class='collection-item'>Freshers/Farewells -
-                </h3>
-                <div class="dropdown-content">
+
+            <li class="item acc" data-category="category4">
+                <div class="h3d">
+                    <h3 class='collection-item acc-head'>Decorations
+
+                        <i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-minus" aria-hidden="true"></i>
+                    </h3>
+                </div>
+
+                <div class="dropdown-content acc-content">
                     <div class="drop">
                         <div>
-                            <img src="img/meeting2.jpg" alt="" />
-                            <img src="img/meetings1.jpg" alt="" />
-                            <img src="img/meeting4.jpg" alt="" />
+                            <img src="img/event.jpg" alt="" class="img img-fluid" />
+                            <img src="img/dj.jpg" alt="" class="img img-fluid" />
+                            <img src="img/33041.jpg" alt="" class="img img-fluid" />
+                            <img src="img/41082.jpg" alt="" class="img img-fluid" />
                         </div>
                     </div>
 
                 </div>
             </li>
-            <li class="item" data-category="category2">
-                <h3 class='collection-item'>Shakeology -
-                </h3>
-                <div class="dropdown-content">
+            <li class="item acc" data-category="category1">
+                <div class="h3d">
+                    <h3 class='collection-item acc-head' style="flex-wrap: wrap;word-wrap: break-word;">
+                        Freshers and Farewells
+                        <i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-minus" aria-hidden="true"></i>
+                    </h3>
+                </div>
+
+                <div class="dropdown-content acc-content">
                     <div class="drop">
                         <div>
-                            <img src="img/kitchen-12.JPG" />
-                            <img src="img/milkshakes1.jpg" alt="" />
-                            <img src="img/meeting2.jpg" alt="" />
-                            <img src="img/meetings1.jpg" alt="" />
-                            <img src="img/meeting4.jpg" alt="" />
+                            <img src="img/meeting2.jpg" alt="" class="img img-fluid" />
+                            <img src="img/meetings1.jpg" alt="" class="img img-fluid" />
+                            <img src="img/meeting4.jpg" alt="" class="img img-fluid" />
                         </div>
                     </div>
 
                 </div>
             </li>
-            <li class="item" data-category="category2">
-                <h3 class='collection-item'>Shanghai Street-
-                </h3>
-                <div class="dropdown-content">
+            <li class="item acc" data-category="category2">
+                <div class="h3d">
+                    <h3 class='collection-item acc-head'>Chai D'POT
+                        <i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-minus" aria-hidden="true"></i>
+                    </h3>
+                </div>
+
+                <div class="dropdown-content acc-content">
                     <div class="drop">
                         <div>
-                            <img src="img/kitchen-10.JPG" />
-                            <img src="img/meeting2.jpg" alt="" />
-                            <img src="img/meetings1.jpg" alt="" />
-                            <img src="img/meeting4.jpg" alt="" />
+                            <img src="img/kitchen-1.JPG" class="img img-fluid" />
+                            <img src="img/meeting2.jpg" alt="" class="img img-fluid" />
+                            <img src="img/meetings1.jpg" alt="" class="img img-fluid" />
+                            <img src="img/meeting4.jpg" alt="" class="img img-fluid" />
                         </div>
                     </div>
 
                 </div>
             </li>
-            <li class="item" data-category="category2">
-                <h3 class='collection-item'>Slider Cafe Kitchen -
-                </h3>
-                <div class="dropdown-content">
+            <li class="item acc" data-category="category2">
+                <div class="h3d">
+                    <h3 class='collection-item acc-head'>North Xpress Kitchen
+                        <i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-minus" aria-hidden="true"></i>
+                    </h3>
+                </div>
+
+                <div class="dropdown-content acc-content">
                     <div class="drop">
                         <div>
-                            <img src="img/kitchen-11.JPG" alt="" />
-                            <img src="img/meeting2.jpg" alt="" />
-                            <img src="img/meetings1.jpg" alt="" />
-                            <img src="img/meeting4.jpg" alt="" />
+                            <img src="img/kitchen-8.JPG" alt="" class="img img-fluid" />
+                            <img src="img/meetings1.jpg" alt="" class="img img-fluid" />
+                            <img src="img/meeting4.jpg" alt="" class="img img-fluid" />
                         </div>
                     </div>
 
                 </div>
             </li>
-            <li class="item" data-category="category2">
-                <h3 class='collection-item'>North Xpress Kitchen -
-                </h3>
-                <div class="dropdown-content">
+            <li class="item acc" data-category="category2">
+                <div class="h3d" style=" border-bottom: 1px solid white;">
+                    <h3 class='collection-item acc-head'>Shakeology
+                        <i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-minus" aria-hidden="true"></i>
+                    </h3>
+                    <p style="padding: 0;font-weight: 700;margin: 0;">Thick Shakes, Milk Shakes, Mojitos, Waffles</p>
+                </div>
+                <div class="dropdown-content acc-content">
                     <div class="drop">
                         <div>
-                            <img src="img/kitchen-8.JPG" alt="" />
-                            <img src="img/meetings1.jpg" alt="" />
-                            <img src="img/meeting4.jpg" alt="" />
+                            <img src="img/kitchen-12.JPG" class="img img-fluid" />
+                            <img src="img/milkshakes1.jpg" alt="" class="img img-fluid" />
+                            <img src="img/meeting2.jpg" alt="" class="img img-fluid" />
+                            <img src="img/meetings1.jpg" alt="" class="img img-fluid" />
+                            <img src="img/meeting4.jpg" alt="" class="img img-fluid" />
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="item acc" data-category="category2">
+                <div class="h3d" style=" border-bottom: 1px solid white;">
+                    <h3 class='collection-item acc-head'>Shanghai Street Kitchen
+                        <i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-minus" aria-hidden="true"></i>
+                    </h3>
+                    <p style="padding: 0;font-weight: 700;margin: 0;">Type of Cuisines that each kitchen offers
+                        Eg:chinese</p>
+                </div>
+
+                <div class="dropdown-content acc-content">
+                    <div class="drop">
+                        <div>
+                            <img src="img/kitchen-10.JPG" class="img img-fluid" />
+                            <img src="img/meeting2.jpg" alt="" class="img img-fluid" />
+                            <img src="img/meetings1.jpg" alt="" class="img img-fluid" />
+                            <img src="img/meeting4.jpg" alt="" class="img img-fluid" />
                         </div>
                     </div>
 
                 </div>
             </li>
-            <li class="item" data-category="category2">
-                <h3 class='collection-item'>Baradari Kitchen -
-                </h3>
-                <div class="dropdown-content">
+            <li class="item acc" data-category="category2">
+                <div class="h3d" style=" border-bottom: 1px solid white;">
+                    <h3 class='collection-item acc-head'>Slider Cafe Kitchen
+                        <i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-minus" aria-hidden="true"></i>
+                    </h3>
+                    <p style="padding: 0;font-weight: 700;margin: 0;">Continental</p>
+                </div>
+                <div class="dropdown-content acc-content">
                     <div class="drop">
                         <div>
-                            <img src="img/kitchen-5.JPG" />
-                            <img src="img/meeting2.jpg" alt="" />
-                            <img src="img/meetings1.jpg" alt="" />
-                            <img src="img/meeting4.jpg" alt="" />
+                            <img src="img/kitchen-11.JPG" alt="" class="img img-fluid" />
+                            <img src="img/meeting2.jpg" alt="" class="img img-fluid" />
+                            <img src="img/meetings1.jpg" alt="" class="img img-fluid" />
+                            <img src="img/meeting4.jpg" alt="" class="img img-fluid" />
                         </div>
                     </div>
 
                 </div>
             </li>
-            <li class="item" data-category="category2">
-                <h3 class='collection-item'>Konsima Kitchen -
-                </h3>
-                <div class="dropdown-content">
+
+            <li class="item acc" data-category="category2">
+                <div class="h3d" style=" border-bottom: 1px solid white;">
+                    <h3 class='collection-item acc-head'>Baradari Kitchen
+                        <i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-minus" aria-hidden="true"></i>
+                    </h3>
+                    <p style="padding: 0;font-weight: 700;margin: 0;">Nizami Cuisines</p>
+                </div>
+                <div class="dropdown-content acc-content">
                     <div class="drop">
                         <div>
-                            <img src="img/kitchen-6.JPG" />
-                            <img src="img/meeting2.jpg" alt="" />
-                            <img src="img/meetings1.jpg" alt="" />
-                            <img src="img/meeting4.jpg" alt="" />
+                            <img src="img/kitchen-5.JPG" class="img img-fluid" />
+                            <img src="img/meeting2.jpg" alt="" class="img img-fluid" />
+                            <img src="img/meetings1.jpg" alt="" class="img img-fluid" />
+                            <img src="img/meeting4.jpg" alt="" class="img img-fluid" />
                         </div>
                     </div>
 
                 </div>
             </li>
-            <li class="item" data-category="category2">
-                <h3 class='collection-item'>Mandi Kitchen -
-                </h3>
-                <div class="dropdown-content">
+            <li class="item acc" data-category="category2">
+                <div class="h3d" style=" border-bottom: 1px solid white;">
+                    <h3 class='collection-item acc-head'>Konaseema Kitchen
+                        <i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-minus" aria-hidden="true"></i>
+                    </h3>
+                    <p style="padding: 0;font-weight: 700;margin: 0;">South Indian Tiffins And Pulavs</p>
+                </div>
+                <div class="dropdown-content acc-content">
                     <div class="drop">
                         <div>
-                            <img src="img/kitchen-7.JPG" />
-                            <img src="img/meeting2.jpg" alt="" />
-                            <img src="img/meetings1.jpg" alt="" />
-                            <img src="img/meeting4.jpg" alt="" />
+                            <img src="img/kitchen-6.JPG" class="img img-fluid" />
+                            <img src="img/meeting2.jpg" alt="" class="img img-fluid" />
+                            <img src="img/meetings1.jpg" alt="" class="img img-fluid" />
+                            <img src="img/meeting4.jpg" alt="" class="img img-fluid" />
                         </div>
                     </div>
 
                 </div>
             </li>
-            <li class="item" data-category="category2">
-                <h3 class='collection-item'>Everyday Frieday Kitchen -
-                </h3>
-                <div class="dropdown-content">
+            <li class="item acc" data-category="category2">
+                <div class="h3d" style=" border-bottom: 1px solid white;">
+                    <h3 class='collection-item acc-head'>Everyday Frieday Kitchen
+                        <i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-minus" aria-hidden="true"></i>
+
+                    </h3>
+                    <p style="padding: 0;font-weight: 700;margin: 0;">Fried kitchen(KFC Style)</p>
+                </div>
+                <div class="dropdown-content acc-content">
                     <div class="drop">
                         <div>
-                            <img src="img/kitchen-2.JPG" />
-                            <img src="img/meeting2.jpg" alt="" />
-                            <img src="img/meetings1.jpg" alt="" />
-                            <img src="img/meeting4.jpg" alt="" />
+                            <img src="img/kitchen-2.JPG" class="img img-fluid" />
+                            <img src="img/meeting2.jpg" alt="" class="img img-fluid" />
+                            <img src="img/meetings1.jpg" alt="" class="img img-fluid" />
+                            <img src="img/meeting4.jpg" alt="" class="img img-fluid" />
                         </div>
                     </div>
 
                 </div>
             </li>
-            <li class="item" data-category="category2">
-                <h3 class='collection-item'>Chai D'POT-
-                </h3>
-                <div class="dropdown-content">
-                    <div class="drop">
-                        <div>
-                            <img src="img/kitchen-1.JPG" />
-                            <img src="img/meeting2.jpg" alt="" />
-                            <img src="img/meetings1.jpg" alt="" />
-                            <img src="img/meeting4.jpg" alt="" />
-                        </div>
-                    </div>
 
+            <li class="item acc" data-category="category2">
+                <div class="h3d" style=" border-bottom: 1px solid white;">
+                    <h3 class='collection-item acc-head'>Froststicks
+                        <i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-minus" aria-hidden="true"></i>
+                    </h3>
+                    <p style="padding: 0;font-weight: 700;margin: 0;">Ice-creams</p>
                 </div>
-            </li>
-            <li class="item" data-category="category2">
-                <h3 class='collection-item'>Froststicks -
-                </h3>
-                <div class="dropdown-content">
+                <div class="dropdown-content acc-content">
                     <div class="drop">
                         <div>
-                            <img src="img/kitchen-3.JPG" />
-                            <img src="img/ice-cream1.jpg" alt="" />
-                            <img src="img/icecream2.jpg" alt="" />
-                            <img src="img/icecreams3.jpg" alt="" />
+                            <img src="img/kitchen-3.JPG" class="img img-fluid" />
+                            <img src="img/ice-cream1.jpg" alt="" class="img img-fluid" />
+                            <img src="img/icecream2.jpg" alt="" class="img img-fluid" />
+                            <img src="img/icecreams3.jpg" alt="" class="img img-fluid" />
 
                         </div>
                     </div>
 
                 </div>
             </li>
-            <li class="item" data-category="category2">
-                <h3 class='collection-item'>Hayati Kitchen -
-                </h3>
-                <div class="dropdown-content">
+            <li class="item acc" data-category="category2">
+                <div class="h3d" style=" border-bottom: 1px solid white;">
+                    <h3 class='collection-item acc-head'>Hayati Kitchen
+                        <i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-minus" aria-hidden="true"></i>
+                    </h3>
+                    <p style="padding: 0;font-weight: 700;margin: 0;">Arabian Cuisine</p>
+                </div>
+                <div class="dropdown-content acc-content">
                     <div class="drop">
                         <div>
-                            <img src="img/kitchen-4.JPG" />
-                            <img src="img/meeting2.jpg" alt="" />
-                            <img src="img/meetings1.jpg" alt="" />
-                            <img src="img/meeting4.jpg" alt="" />
+                            <img src="img/kitchen-4.JPG" class="img img-fluid" />
+                            <img src="img/meeting2.jpg" alt="" class="img img-fluid" />
+                            <img src="img/meetings1.jpg" alt="" class="img img-fluid" />
+                            <img src="img/meeting4.jpg" alt="" class="img img-fluid" />
                         </div>
                     </div>
 
                 </div>
             </li>
-            <li class="item" data-category="category4">
-                <h3 class='collection-item'>LED Display for Video, Images, and Live Streaming -
-                </h3>
-                <div class="dropdown-content">
+            <li class="item acc" data-category="category4">
+                <div class="h3d">
+                    <h3 class='collection-item acc-head'>LED Display for Video, Images, and Live Streaming
+                        <i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-minus" aria-hidden="true"></i>
+                    </h3>
+                </div>
+
+                <div class="dropdown-content acc-content">
                     <div class="drop">
                         <div>
-                            <img src="img/screenings1.jpg" alt="" />
-                            <img src="img/screning2.jpg" alt="" />
-                            <img src="img/screening3.jpg" alt="" />
+                            <img src="img/screenings1.jpg" alt="" class="img img-fluid" />
+                            <img src="img/screning2.jpg" alt="" class="img img-fluid" />
+                            <img src="img/screening3.jpg" alt="" class="img img-fluid" />
                         </div>
                     </div>
 
                 </div>
             </li>
-            <li class="item" data-category="category1">
-                <h3 class='collection-item'>Choreographers for the Events -
-                </h3>
-                <div class="dropdown-content">
+            <li class="item acc" data-category="category1">
+                <div class="h3d">
+                    <h3 class='collection-item acc-head'>Choreographers for the Events
+                        <i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-minus" aria-hidden="true"></i>
+                    </h3>
+                </div>
+
+                <div class="dropdown-content acc-content">
                     <div class="drop">
                         <div>
-                            <img src="img/meeting2.jpg" alt="" />
-                            <img src="img/meetings1.jpg" alt="" />
+                            <img src="img/meeting2.jpg" alt="" class="img img-fluid" />
+                            <img src="img/meetings1.jpg" alt="" class="img img-fluid" />
+                            <img src="img/meeting4.jpg" alt="" class="img img-fluid" />
                         </div>
                     </div>
-
-                    <img src="img/meeting4.jpg" alt="" />
                 </div>
             </li>
-            <li class="item" data-category="category4">
-                <h3 class='collection-item'>Sound and Lighting -
-                </h3>
-                <div class="dropdown-content">
-                    <div class="drop">
-                        <div>
-                            <img src="img/dj.jpg" alt="" />
-                            <img src="img/dancing1.jpg" alt="" />
-                            <img src="img/entertaiment1.jpg" alt="" />
-                            <img src="img/entertainment2.jpg" alt="" />
-                        </div>
-                    </div>
-
+            <li class="item acc" data-category="category4">
+                <div class="h3d">
+                    <h3 class='collection-item acc-head'>Sound and Lighting
+                        <i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-minus" aria-hidden="true"></i>
+                    </h3>
                 </div>
-            </li>
-            <li class="item" data-category="category1">
-                <h3 class='collection-item'>Marketing Team -
-                </h3>
-                <div class="dropdown-content">
+
+                <div class="dropdown-content acc-content">
                     <div class="drop">
                         <div>
-                            <img src="img/meeting2.jpg" alt="" />
-                            <img src="img/meetings1.jpg" alt="" />
-                            <img src="img/meeting4.jpg" alt="" />
+                            <img src="img/dj.jpg" alt="" class="img img-fluid" />
+                            <img src="img/dancing1.jpg" alt="" class="img img-fluid" />
+                            <img src="img/entertaiment1.jpg" alt="" class="img img-fluid" />
+                            <img src="img/entertainment2.jpg" alt="" class="img img-fluid" />
                         </div>
                     </div>
 
                 </div>
             </li>
-            <li class="item" data-category="category3">
-                <h3 class='collection-item'>Kids Play Area -
-                </h3>
-                <div class="dropdown-content">
+            <li class="item acc" data-category="category1">
+                <div class="h3d">
+                    <h3 class='collection-item acc-head'>Marketing Team
+                        <i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-minus" aria-hidden="true"></i>
+                    </h3>
+                </div>
+
+                <div class="dropdown-content acc-content">
                     <div class="drop">
                         <div>
-                            <img src="img/kids1.jpg" alt="" />
-                            <img src="img/kids2.jpg" alt="" />
-                            <img src="img/kids4.jpg" alt="" />
+                            <img src="img/meeting2.jpg" alt="" class="img img-fluid" />
+                            <img src="img/meetings1.jpg" alt="" class="img img-fluid" />
+                            <img src="img/meeting4.jpg" alt="" class="img img-fluid" />
                         </div>
                     </div>
 
                 </div>
             </li>
-            <li class="item" data-category="category3">
-                <h3 class='collection-item'>Axe Throwing -
-                </h3>
-                <div class="dropdown-content">
+            <li class="item acc" data-category="category3">
+                <div class="h3d">
+                    <h3 class='collection-item acc-head'>Kids Play Area
+                        <i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-minus" aria-hidden="true"></i>
+                    </h3>
+                </div>
+
+                <div class="dropdown-content acc-content">
                     <div class="drop">
                         <div>
-                            <img src="img/axe-throwing.JPG" alt="" />
+                            <img src="img/kids1.jpg" alt="" class="img img-fluid" />
+                            <img src="img/kids2.jpg" alt="" class="img img-fluid" />
+                            <img src="img/kids4.jpg" alt="" class="img img-fluid" />
+                        </div>
+                    </div>
+
+                </div>
+            </li>
+            <li class="item acc" data-category="category3">
+                <div class="h3d">
+                    <h3 class='collection-item acc-head'>Axe Throwing
+                        <i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-minus" aria-hidden="true"></i>
+                    </h3>
+                </div>
+
+                <div class="dropdown-content acc-content">
+                    <div class="drop">
+                        <div>
+                            <img src="img/axe-throwing.JPG" alt="" class="img img-fluid" />
                             <video src="img/axeThrowing.mp4" width="300" height="300" autoplay muted>
 
                             </video>
@@ -657,23 +822,31 @@
 
                 </div>
             </li>
-            <li class="item" data-category="category3">
-                <h3 class='collection-item'>Gun Shooting -
-                </h3>
-                <div class="dropdown-content">
+            <li class="item acc" data-category="category3">
+                <div class="h3d">
+                    <h3 class='collection-item acc-head'>Gun Shooting
+                        <i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-minus" aria-hidden="true"></i>
+                    </h3>
+                </div>
+
+                <div class="dropdown-content acc-content">
                     <div class="drop">
                         <div>
-                            <img src="img/shoot1.jpg" alt="" />
-                            <img src="img/shoot2.jpg" alt="" />
+                            <img src="img/shoot1.jpg" alt="" class="img img-fluid" />
+                            <img src="img/shoot2.jpg" alt="" class="img img-fluid" />
                         </div>
                     </div>
 
                 </div>
             </li>
-            <li class="item" data-category="category3">
-                <h3 class='collection-item'>VR Games -
-                </h3>
-                <div class="dropdown-content">
+            <li class="item acc" data-category="category3">
+                <div class="h3d">
+                    <h3 class='collection-item acc-head'>VR Games
+                        <i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-minus" aria-hidden="true"></i>
+                    </h3>
+                </div>
+
+                <div class="dropdown-content acc-content">
                     <div class="drop">
                         <div>
                             <video src="img/vr.mp4" width="300" height="300" autoplay muted>
@@ -684,15 +857,19 @@
 
                 </div>
             </li>
-            <li class="item" data-category="category3">
-                <h3 class='collection-item'>Crackers -
-                </h3>
-                <div class="dropdown-content">
+            <li class="item acc" data-category="category3">
+                <div class="h3d">
+                    <h3 class='collection-item acc-head'>Crackers
+                        <i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-minus" aria-hidden="true"></i>
+                    </h3>
+                </div>
+
+                <div class="dropdown-content acc-content">
                     <div class="drop">
                         <div>
-                            <img src="img/crackers1.jpg" alt="" />
-                            <img src="img/crackers2.jpg" alt="" />
-                            <img src="img/crackers3.jpg" alt="" />
+                            <img src="img/crackers1.jpg" alt="" class="img img-fluid" />
+                            <img src="img/crackers2.jpg" alt="" class="img img-fluid" />
+                            <img src="img/crackers3.jpg" alt="" class="img img-fluid" />
                         </div>
                     </div>
 
@@ -702,23 +879,24 @@
 
     </div>
     <script>
+
         //dropdown-content start
-        function toggleElementVisibility(event) {
+        // function toggleElementVisibility(event) {
 
-            var item = event.target; // clicked collection item
-            var element = item.nextElementSibling;
+        //     var item = event.target; // clicked collection item
+        //     var element = item.nextElementSibling;
 
-            // Toggle visibility
-            if (element.style.display === 'none') {
-                element.style.display = 'block';
-            } else {
-                element.style.display = 'none';
-            }
-        }
-        var collectionItems = document.querySelectorAll('.collection-item');
-        collectionItems.forEach(function (item) {
-            item.addEventListener('click', toggleElementVisibility);
-        });
+        //     // Toggle visibility
+        //     if (element.style.display === 'none') {
+        //         element.style.display = 'block';
+        //     } else {
+        //         element.style.display = 'none';
+        //     }
+        // }
+        // var collectionItems = document.querySelectorAll('.collection-item');
+        // collectionItems.forEach(function (item) {
+        //     item.addEventListener('click', toggleElementVisibility);
+        // });
         //dropdown-content end 
 
         function filterItems(category) {
@@ -747,7 +925,8 @@
             <div class="row">
                 <div class="col-lg-6" style="min-height: 500px" data-aos="fade-up">
                     <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100" src="img/gallery-2.png" style="object-fit: cover" />
+                        <img class="position-absolute w-100 h-100" src="img/gallery-2.png" style="object-fit: cover"
+                            class="img img-fluid" />
                     </div>
                 </div>
                 <div class="col-lg-6 pt-5 pb-lg-5" data-aos="fade-up">
@@ -755,8 +934,8 @@
                         <h6 class="d-inline-block text-white text-uppercase bg-primary py-1 px-2">
                             Open Hours
                         </h6>
-                        <h1 class="mb-4">Best Place to Enjoy</h1>
-                        <p>
+                        <h1 class="mb-4" style="font-size: 1.5rem;">Best Place to Enjoy</h1>
+                        <p style="color: #cc8b35;">
                             In a broader sense, "drive-in" can refer to events or services
                             that cater to people who remain in their vehicles, such as
                             drive-in concerts, drive-in church services, or even drive-in
@@ -819,13 +998,14 @@
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <input type="text" class="form-control bg-transparent p-4 fullName"
-                                            placeholder="Your Name" id="fullName" required="required" />
+                                            placeholder="Your Name" id="fullName" required="required"
+                                            class="img img-fluid" />
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <input id="mail" type="email" class="form-control bg-transparent p-4 mail"
-                                            placeholder="Your Email" required="required" />
+                                            placeholder="Your Email" required="required" class="img img-fluid" />
                                     </div>
                                 </div>
                             </div>
@@ -835,7 +1015,8 @@
                                         <div class="date" data-target-input="nearest">
                                             <input id="date" type="date" onchange="logInputValue(this)"
                                                 class="form-control bg-transparent p-4 datetimepicker-input date"
-                                                placeholder="Select Date" data-toggle="datetimepicker" />
+                                                placeholder="Select Date" data-toggle="datetimepicker"
+                                                class="img img-fluid" />
 
                                         </div>
                                     </div>
@@ -845,7 +1026,8 @@
                                         <div class="time" data-target-input="nearest">
                                             <input id="time" type="time"
                                                 class="form-control bg-transparent p-4 datetimepicker-input time"
-                                                placeholder="Select Time" data-toggle="datetimepicker" />
+                                                placeholder="Select Time" data-toggle="datetimepicker"
+                                                class="img img-fluid" />
                                         </div>
                                     </div>
                                 </div>
@@ -854,7 +1036,7 @@
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <input id="message" type="text" class="form-control bg-transparent p-4 message"
-                                            placeholder="Message" required="required" />
+                                            placeholder="Message" required="required" class="img img-fluid" />
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
@@ -896,7 +1078,7 @@
                 <div class="col-lg-6 pr-lg-5 mb-5">
                     <a href="index.html" class="navbar-brand">
                         <img src="./img/logo_transp.png" class="img img-fluid" alt=""
-                            style="width: 400px;margin-bottom: 30px;" />
+                            style="width: 400px;margin-bottom: 30px;" class="img img-fluid" />
                     </a>
                     <p></p>
                     <p>
@@ -962,7 +1144,7 @@
                             <div class="w-100">
                                 <div class="input-group">
                                     <input type="text" class="form-control border-light" style="padding: 30px"
-                                        placeholder="Your Email Address" />
+                                        placeholder="Your Email Address" class="img img-fluid" />
                                     <div class="input-group-append">
                                         <button class="btn btn-primary px-4">Sign
                                             Up</button>
