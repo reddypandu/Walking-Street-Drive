@@ -440,14 +440,23 @@
                             </div>
                         </div>
                         <div class="col-sm-6">
+                            <div class="form-group">
+                                <input id="number" type="text" class="form-control bg-transparent p-4 message"
+                                    placeholder="Enter Your number" required="required" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-sm-12">
                             <button class="btn btn-primary btn-block" type="submit"
-                                style="height: 47px;background-color: white;color: #cc8b35;">Book A
+                                style="height: 47px;background-color:#cc8b35;color: white;">Book A
                                 Table</button>
                         </div>
                     </div>
-                </form>
             </div>
+            </form>
         </div>
+    </div>
     </div>
     </div>
     <!-- Service End -->
@@ -720,6 +729,7 @@
                 var date = document.getElementById("date").value;
                 var time = document.getElementById("time").value;
                 var message = document.getElementById("message").value;
+                var number = document.getElementById("number").value;
 
                 console.log("date==>", date);
                 console.log("time==>", time);
@@ -737,6 +747,9 @@
                     "\n" +
                     "Time: " +
                     time +
+                    "\n" +
+                    "Phone Number: " +
+                    number +
                     "\n" +
                     "Message: " +
                     message
@@ -759,6 +772,7 @@
                             to_name: "Walk-In Street",
                             message: `Booking on ${date} at ${time}
     Message : ${message}
+    Phone Number : ${number}
     Reply to ${email}`,
                             reply_to: email,
                         })

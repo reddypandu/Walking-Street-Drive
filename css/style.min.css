@@ -2219,7 +2219,7 @@ textarea.form-control.is-invalid {
   }
 }
 .btn:hover {
-  color: #757575;
+  color: white;
   text-decoration: none;
 }
 .btn:focus,
@@ -2244,7 +2244,7 @@ fieldset:disabled a.btn {
   border-color: #f9a392;
 }
 .btn-primary:hover {
-  color: #212529;
+  color: white;
   background-color: #f7846e;
   border-color: #f67a62;
 }
