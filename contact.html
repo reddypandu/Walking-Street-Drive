@@ -89,7 +89,188 @@
 
 <body>
     <!-- Topbar Start -->
-    <div class="container-fluid d-none d-lg-block pt-2 " style="background-color: #22092c;">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: #22092c;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0;
+        }
+
+        .logo1 {
+            width: 200px;
+            height: auto;
+            background-color: #cc8b35;
+            padding: 10px;
+        }
+
+        .logo1 img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            margin-right: 10px;
+            padding: 15px;
+            text-transform: uppercase;
+            transition: all 1s ease-in-out;
+        }
+
+        .nav-links li.active {
+            background-color: #cc8b35;
+        }
+
+        .nav-links li:hover {
+            background-color: #cc8b35;
+            color: white;
+        }
+
+        .nav-links li a {
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .social-icons {
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .social-icons ul {
+            display: flex;
+            flex-direction: row;
+            list-style-type: none;
+        }
+
+        .social-icons li {
+            margin-right: 15px;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+
+        .menu-icon {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+
+        }
+
+        @media (max-width: 992px) {
+            .menu-icon {
+                display: block;
+                margin-right: 20px;
+                font-size: 25px;
+                color: #cc8b35;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 85px;
+                left: 0;
+                width: 100%;
+                background-color: #22092c;
+                padding: 10px;
+                z-index: 999;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .nav-links li {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+
+            .social-icons {}
+        }
+
+        @media(max-width:768px) {
+            .logo1 {
+                width: 180px;
+            }
+        }
+
+        @media(max-width:520px) {
+            .logo1 {
+                width: 150px;
+            }
+        }
+
+        @media(max-width:375px) {
+            .logo1 {
+                width: 130px;
+            }
+        }
+
+        @media(max-width:320px) {
+            .logo1 {
+                width: 100px;
+            }
+        }
+    </style>
+    <div class="navbar">
+        <div class="logo1">
+            <img src="img/logo_white.png" alt="Logo">
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="entertainment.html">Games</a></li>
+            <li><a href="whatwehost.html">What We Host</a></li>
+            <li><a href="booking.html">Bookings</a></li>
+            <li class="active"><a href="#">Event Calendar</a></li>
+        </ul>
+
+        <div class="social-icons">
+            <ul style="margin: 0;">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="menu-icon">&#9776;</div>
+    </div>
+
+    <script>
+        const menuIcon = document.querySelector('.menu-icon');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+    </script>
+    <!-- <div class="container-fluid d-none d-lg-block pt-2 " style="background-color: #22092c;">
         <div class="col-12 text-right">
             <div class="d-inline-flex align-items-center">
                 <a class="text-primary px-2" href="tel:+9196529
@@ -108,20 +289,20 @@
                 </a>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Topbar End -->
     <!-- Navbar Start -->
-    <div class="container-fluid na pt-0" style="padding-left: 0;padding-right: 0;">
+    <!-- <div class="container-fluid na pt-0" style="padding-left: 0;padding-right: 0;">
         <nav class="navbar navbar-expand-lg navbar-light py-3 py-lg-2 px-lg-0">
 
             <a href="home.html" class="navbar-brand ml-lg-3">
                 <img class="logo" src="./img/logo_white.png" alt="" />
-            </a>
+            </a> -->
 
-            <!-- </div> -->
+    <!-- </div> -->
 
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+    <!-- <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
@@ -130,9 +311,9 @@
                     <a href="about.html" class="nav-item nav-link">ABOUT</a>
                     <a href="gallery.html" class="nav-item nav-link">GALLERY</a>
                     <a href="entertainment.html" class="nav-item nav-link">GAMES</a>
-                    <a href="whatwehost.html" class="nav-item nav-link">what we host</a>
-                    <!-- <a href="opening.html" class="nav-item nav-link">OPEN HOURS</a> -->
-                    <!-- <div class="nav-item dropdown">
+                    <a href="whatwehost.html" class="nav-item nav-link">what we host</a> -->
+    <!-- <a href="opening.html" class="nav-item nav-link">OPEN HOURS</a> -->
+    <!-- <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">More</a>
                         <div class="dropdown-menu rounded-0 m-0">
                             <a href="entertainment.html" class="dropdown-item">ENTERTAINMENT</a>
@@ -141,14 +322,14 @@
                     <a href="testimonial.html" class="dropdown-item">TESTIMONIAL</a>
                 </div>
             </div> -->
-                    <a href="booking.html" class="nav-item nav-link">BOOKING</a>
+    <!-- <a href="booking.html" class="nav-item nav-link">BOOKING</a>
                     <a href="#" class="nav-item nav-link active">EVENT CALENDER</a>
                 </div>
 
             </div>
 
         </nav>
-    </div>
+    </div> -->
     <!-- Navbar End -->
 
 
@@ -158,7 +339,7 @@
     <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
     <!-- Header Start -->
-    <div class="jumbotron jumbotron-fluid" style="background-color:#000;">
+    <div class="jumbotron-fluid" style="background-color:#000; padding-top: 2rem;">
         <div class="container text-center">
             <h3 class="display-3" style="color: white;font-size: 2rem;">
                 Events
@@ -192,9 +373,28 @@
         <!-- <h1 class="text-center">CALENDER</h1> -->
         <div id="calendar"></div>
     </div>
+    <style>
+        @media(max-width:575px) {
+            .calender {
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+        }
+
+        .fc-scroller {
+            background-image: url('img/cale-img2.png');
+            background-size: cover;
+
+        }
+
+        .fc table a {
+            color: #22092c;
+            font-weight: 700;
+        }
+    </style>
     <!-- Contact Start -->
-    <div class="container py-5">
-        <div class="pt-5">
+    <div class="container">
+        <div class="">
             <div class="contact-form bg-light p-4 p-lg-5 my-lg-5">
 
                 <h1 class="mb-4" style="font-size: 1.5rem;">
@@ -232,7 +432,7 @@
         </div>
     </div>
     <!-- Contact End -->
-    <div class="container">
+    <div class="container map">
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.028927519886!2d78.38424647429409!3d17.458329500759305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91d11bf95e83%3A0xbf25fbbf624cee9f!2sWalking%20Street%20Drive-In!5e0!3m2!1sen!2sin!4v1700565442775!5m2!1sen!2sin"
             width="100%" height="600" allowfullscreen="" loading="lazy"
@@ -253,11 +453,23 @@
             width: 100%;
             background-position: center;
         }
+
+        @media(max-width:992px) {
+            .map {
+                padding-top: 30px;
+                padding: 10px;
+                height: 100%;
+            }
+
+            .calender {
+                padding-bottom: 30px;
+            }
+        }
     </style>
     <!-- Footer Start -->
-    <div class="footer container-fluid position-relative py-5" id="footer">
+    <div class="footer container-fluid position-relative pt-4" id="footer">
         <!-- <div class="fimage"></div> -->
-        <div class="container pt-5">
+        <div class="container">
             <div class="row">
                 <div class="col-lg-6 pr-lg-5 mb-5">
                     <a href="home.html" class="navbar-brand">
@@ -324,7 +536,8 @@
                             </div>
                         </div>
                         <div class="col-sm-12 mb-5">
-                            <h5 class="text-white text-uppercase mb-4">Newsletter</h5>
+                            <h5 class="text-white text-uppercase mb-4" style="font-size: 2.5rem;font-family: none;">
+                                Newsletter</h5>
                             <div class="w-100">
                                 <div class="input-group">
                                     <input type="text" class="form-control border-light" style="padding: 30px"

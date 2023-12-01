@@ -40,7 +40,188 @@
 <body>
 
     <!-- Topbar Start -->
-    <div class="container-fluid d-none d-lg-block pt-2 " style="background-color: #22092c;">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: #22092c;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0;
+        }
+
+        .logo1 {
+            width: 200px;
+            height: auto;
+            background-color: #cc8b35;
+            padding: 10px;
+        }
+
+        .logo1 img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            margin-right: 10px;
+            padding: 15px;
+            text-transform: uppercase;
+            transition: all 1s ease-in-out;
+        }
+
+        .nav-links li.active {
+            background-color: #cc8b35;
+        }
+
+        .nav-links li:hover {
+            background-color: #cc8b35;
+            color: white;
+        }
+
+        .nav-links li a {
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .social-icons {
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .social-icons ul {
+            display: flex;
+            flex-direction: row;
+            list-style-type: none;
+        }
+
+        .social-icons li {
+            margin-right: 15px;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+
+        .menu-icon {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+
+        }
+
+        @media (max-width: 992px) {
+            .menu-icon {
+                display: block;
+                margin-right: 20px;
+                font-size: 25px;
+                color: #cc8b35;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 85px;
+                left: 0;
+                width: 100%;
+                background-color: #22092c;
+                padding: 10px;
+                z-index: 999;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .nav-links li {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+
+            .social-icons {}
+        }
+
+        @media(max-width:768px) {
+            .logo1 {
+                width: 180px;
+            }
+        }
+
+        @media(max-width:520px) {
+            .logo1 {
+                width: 150px;
+            }
+        }
+
+        @media(max-width:375px) {
+            .logo1 {
+                width: 130px;
+            }
+        }
+
+        @media(max-width:320px) {
+            .logo1 {
+                width: 100px;
+            }
+        }
+    </style>
+    <div class="navbar">
+        <div class="logo1">
+            <img src="img/logo_white.png" alt="Logo">
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="entertainment.html">Games</a></li>
+            <li class="active"><a href="#">What We Host</a></li>
+            <li><a href="booking.html">Bookings</a></li>
+            <li><a href="contact.html">Event Calendar</a></li>
+        </ul>
+
+        <div class="social-icons">
+            <ul style="margin: 0;">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="menu-icon">&#9776;</div>
+    </div>
+
+    <script>
+        const menuIcon = document.querySelector('.menu-icon');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+    </script>
+    <!-- <div class="container-fluid d-none d-lg-block pt-2 " style="background-color: #22092c;">
         <div class="col-12 text-right">
             <div class="d-inline-flex align-items-center">
                 <a class="text-primary px-2" href="tel:+9196529
@@ -59,20 +240,20 @@
                 </a>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Topbar End -->
     <!-- Navbar Start -->
-    <div class="container-fluid na pt-0" style="padding-left: 0;padding-right: 0;">
+    <!-- <div class="container-fluid na pt-0" style="padding-left: 0;padding-right: 0;">
         <nav class="navbar navbar-expand-lg navbar-light py-3 py-lg-2 px-lg-0">
 
             <a href="index.html" class="navbar-brand ml-lg-3">
                 <img class="logo" src="./img/logo_white.png" alt="" class="img img-fluid" />
-            </a>
+            </a> -->
 
-            <!-- </div> -->
+    <!-- </div> -->
 
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+    <!-- <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
@@ -81,9 +262,9 @@
                     <a href="about.html" class="nav-item nav-link">ABOUT</a>
                     <a href="gallery.html" class="nav-item nav-link">GALLERY</a>
                     <a href="entertainment.html" class="nav-item nav-link ">GAMES</a>
-                    <a href="whatwehost.html" class="nav-item nav-link active">what we host</a>
-                    <!-- <a href="opening.html" class="nav-item nav-link">OPEN HOURS</a> -->
-                    <!-- <div class="nav-item dropdown">
+                    <a href="whatwehost.html" class="nav-item nav-link active">what we host</a> -->
+    <!-- <a href="opening.html" class="nav-item nav-link">OPEN HOURS</a> -->
+    <!-- <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">More</a>
                         <div class="dropdown-menu rounded-0 m-0">
                             <a href="entertainment.html" class="dropdown-item">ENTERTAINMENT</a>
@@ -92,14 +273,14 @@
                     <a href="testimonial.html" class="dropdown-item">TESTIMONIAL</a>
                 </div>
             </div> -->
-                    <a href="booking.html" class="nav-item nav-link">BOOKING</a>
+    <!-- <a href="booking.html" class="nav-item nav-link">BOOKING</a>
                     <a href="contact.html" class="nav-item nav-link">EVENT CALENDER</a>
                 </div>
 
             </div>
 
         </nav>
-    </div>
+    </div> -->
     <!-- Navbar End -->
 
 
@@ -108,10 +289,9 @@
     </div>
     <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
     <!-- Header Start -->
-    <div class="jumbotron jumbotron-fluid " style="background-color: #000;">
+    <div class="jumbotron-fluid " style="background-color: #000;padding-bottom: 20px;padding-top: 20px;">
         <div class="container text-center">
-            <h3 class="text-white display-3" style="font-size: 3rem;">Services
-
+            <h3 class="text-white display-3" style="font-size: 2.5rem;">Services
             </h3>
 
         </div>
@@ -141,6 +321,8 @@
 
             cursor: pointer;
             transition: all 0.5s ease-in-out;
+            padding-left: 10px;
+            padding-right: 10px;
         }
 
         .collection-item:hover {
@@ -158,7 +340,7 @@
 
             transition: all 3s ease-in-out;
             text-align: center;
-            background-color: white;
+            background-color: #22092c;
             padding: 10px;
         }
 
@@ -170,7 +352,8 @@
         }
 
         .grid-list {
-            padding: 3rem;
+            padding-top: 1rem;
+            padding-left: 0;
         }
 
         @media(max-width:992px) {
@@ -179,13 +362,13 @@
             }
         }
 
-        .dropdown-content .drop div {
+        /* .dropdown-content .drop div {
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
             align-items: center;
             flex-wrap: wrap;
-        }
+        } */
 
         .dropdown-content .drop .drop1 {
             display: flex;
@@ -236,6 +419,10 @@
         .acc.active .acc-content {
             display: block;
         }
+
+        .list ul button:hover {
+            cursor: pointer;
+        }
     </style>
     <div class="container-fluid px-lg-5 px-sm-0" style="border-bottom: 1px solid #cc8b35;">
         <div class="list">
@@ -258,10 +445,50 @@
                 <div class="dropdown-content acc-content">
                     <div class="drop">
 
-                        <div>
+                        <!-- <div>
                             <img src="img/alcohol1.jpg" alt="" class="img img-fluid" />
                             <img src="img/drinks2.jpg" alt="" class="img img-fluid" />
                             <img src="img/drinks3.jpg" alt="" class="img img-fluid" />
+                        </div> -->
+                        <div class="container-fluid pt-2">
+                            <div class="owl-carousel service-carousel">
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-1.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-3.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-4.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-5.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-6.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-7.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-2.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-6.JPG" alt="">
+
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -275,10 +502,50 @@
 
                 <div class="dropdown-content acc-content">
                     <div class="drop">
-                        <div>
+                        <!-- <div>
                             <img src="img/food1.jpg" alt="" class="img img-fluid" />
                             <img src="img/food2.jpg" alt="" class="img img-fluid" />
                             <img src="img/food3.jpg" alt="" class="img img-fluid" />
+                        </div> -->
+                        <div class="container-fluid pt-2">
+                            <div class="owl-carousel service-carousel">
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-1.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-3.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-4.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-5.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-6.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-7.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-2.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-6.JPG" alt="">
+
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -293,8 +560,48 @@
 
                 <div class="dropdown-content acc-content">
                     <div class="drop">
-                        <div>
+                        <!-- <div>
                             <img src="img/party1.jpg" alt="" class="img img-fluid" />
+                        </div> -->
+                        <div class="container-fluid pt-2">
+                            <div class="owl-carousel service-carousel">
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-1.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-3.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-4.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-5.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-6.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-7.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-2.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-6.JPG" alt="">
+
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -309,8 +616,48 @@
 
                 <div class="dropdown-content acc-content">
                     <div class="drop">
-                        <div>
+                        <!-- <div>
                             <img src="img/gallery-4.JPG" class="img img-fluid" />
+                        </div> -->
+                        <div class="container-fluid pt-2">
+                            <div class="owl-carousel service-carousel">
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-1.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-3.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-4.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-5.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-6.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-7.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-2.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-6.JPG" alt="">
+
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -318,17 +665,57 @@
             </li>
             <li class="item acc" data-category="category1">
                 <div class="h3d">
-                    <h3 class='collection-item acc-head'>Get-Togethers -
+                    <h3 class='collection-item acc-head'>Get-Togethers
                         <i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-minus" aria-hidden="true"></i>
                     </h3>
                 </div>
 
                 <div class="dropdown-content acc-content">
                     <div class="drop">
-                        <div>
+                        <!-- <div>
                             <img src="img/meeting2.jpg" alt="" class="img img-fluid" />
                             <img src="img/meetings1.jpg" alt="" class="img img-fluid" />
                             <img src="img/meeting4.jpg" alt="" class="img img-fluid" />
+                        </div> -->
+                        <div class="container-fluid pt-2">
+                            <div class="owl-carousel service-carousel">
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-1.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-3.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-4.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-5.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-6.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-7.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-2.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-6.JPG" alt="">
+
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -336,17 +723,57 @@
             </li>
             <li class="item acc" data-category="category3">
                 <div class="h3d">
-                    <h3 class='collection-item acc-head'>Receptions -
+                    <h3 class='collection-item acc-head'>Receptions
                         <i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-minus" aria-hidden="true"></i>
                     </h3>
                 </div>
 
                 <div class="dropdown-content acc-content">
                     <div class="drop">
-                        <div>
+                        <!-- <div>
                             <img src="img/wedding1.jpg" alt="" class="img img-fluid" />
                             <img src="img/wedding3.jpg" alt="" class="img img-fluid" />
                             <img src="img/functions1.jpg" alt="" class="img img-fluid" />
+                        </div> -->
+                        <div class="container-fluid pt-2">
+                            <div class="owl-carousel service-carousel">
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-1.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-3.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-4.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-5.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-6.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-7.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-2.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-6.JPG" alt="">
+
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -361,10 +788,50 @@
 
                 <div class="dropdown-content acc-content">
                     <div class="drop">
-                        <div>
+                        <!-- <div>
                             <img src="img/screenings1.jpg" alt="" class="img img-fluid" />
                             <img src="img/screning2.jpg" alt="" class="img img-fluid" />
                             <img src="img/screening3.jpg" alt="" class="img img-fluid" />
+                        </div> -->
+                        <div class="container-fluid pt-2">
+                            <div class="owl-carousel service-carousel">
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-1.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-3.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-4.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-5.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-6.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-7.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-2.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-6.JPG" alt="">
+
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -379,10 +846,50 @@
 
                 <div class="dropdown-content acc-content">
                     <div class="drop">
-                        <div>
+                        <!-- <div>
                             <img src="img/interviews1.jpg" alt="" class="img img-fluid" />
                             <img src="img/meetings1.jpg" alt="" class="img img-fluid" />
                             <img src="img/meeting4.jpg" alt="" class="img img-fluid" />
+                        </div> -->
+                        <div class="container-fluid pt-2">
+                            <div class="owl-carousel service-carousel">
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-1.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-3.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-4.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-5.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-6.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-7.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-2.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-6.JPG" alt="">
+
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -397,10 +904,50 @@
 
                 <div class="dropdown-content acc-content">
                     <div class="drop">
-                        <div>
+                        <!-- <div>
                             <img src="img/meeting2.jpg" alt="" class="img img-fluid" />
                             <img src="img/meetings1.jpg" alt="" class="img img-fluid" />
                             <img src="img/meeting4.jpg" alt="" class="img img-fluid" />
+                        </div> -->
+                        <div class="container-fluid pt-2">
+                            <div class="owl-carousel service-carousel">
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-1.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-3.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-4.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-5.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-6.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-7.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-2.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-6.JPG" alt="">
+
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -415,10 +962,50 @@
 
                 <div class="dropdown-content acc-content">
                     <div class="drop">
-                        <div>
+                        <!-- <div>
                             <img src="img/meeting2.jpg" alt="" class="img img-fluid" />
                             <img src="img/meetings1.jpg" alt="" class="img img-fluid" />
                             <img src="img/meeting4.jpg" alt="" class="img img-fluid" />
+                        </div> -->
+                        <div class="container-fluid pt-2">
+                            <div class="owl-carousel service-carousel">
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-1.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-3.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-4.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-5.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-6.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-7.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-2.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-6.JPG" alt="">
+
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -433,10 +1020,50 @@
 
                 <div class="dropdown-content acc-content">
                     <div class="drop">
-                        <div>
+                        <!-- <div>
                             <img src="img/event.jpg" alt="" class="img img-fluid" />
                             <img src="img/event2.jpg" alt="" class="img img-fluid" />
                             <img src="img/event3.jpg" alt="" class="img img-fluid" />
+                        </div> -->
+                        <div class="container-fluid pt-2">
+                            <div class="owl-carousel service-carousel">
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-1.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-3.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-4.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-5.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-6.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-7.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-2.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-6.JPG" alt="">
+
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -451,10 +1078,50 @@
 
                 <div class="dropdown-content acc-content">
                     <div class="drop">
-                        <div>
+                        <!-- <div>
                             <img src="img/meeting2.jpg" alt="" class="img img-fluid" />
                             <img src="img/meetings1.jpg" alt="" class="img img-fluid" />
                             <img src="img/meeting4.jpg" alt="" class="img img-fluid" />
+                        </div> -->
+                        <div class="container-fluid pt-2">
+                            <div class="owl-carousel service-carousel">
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-1.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-3.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-4.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-5.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-6.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-7.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-2.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-6.JPG" alt="">
+
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -469,10 +1136,50 @@
 
                 <div class="dropdown-content acc-content">
                     <div class="drop">
-                        <div>
+                        <!-- <div>
                             <img src="img/meeting2.jpg" alt="" class="img img-fluid" />
                             <img src="img/meetings1.jpg" alt="" class="img img-fluid" />
                             <img src="img/meeting4.jpg" alt="" class="img img-fluid" />
+                        </div> -->
+                        <div class="container-fluid pt-2">
+                            <div class="owl-carousel service-carousel">
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-1.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-3.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-4.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-5.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-6.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-7.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-2.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-6.JPG" alt="">
+
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -489,11 +1196,51 @@
 
                 <div class="dropdown-content acc-content">
                     <div class="drop">
-                        <div>
+                        <!-- <div>
                             <img src="img/event.jpg" alt="" class="img img-fluid" />
                             <img src="img/dj.jpg" alt="" class="img img-fluid" />
                             <img src="img/33041.jpg" alt="" class="img img-fluid" />
                             <img src="img/41082.jpg" alt="" class="img img-fluid" />
+                        </div> -->
+                        <div class="container-fluid pt-2">
+                            <div class="owl-carousel service-carousel">
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-1.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-3.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-4.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-5.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-6.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-7.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-2.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-6.JPG" alt="">
+
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -509,10 +1256,50 @@
 
                 <div class="dropdown-content acc-content">
                     <div class="drop">
-                        <div>
+                        <!-- <div>
                             <img src="img/meeting2.jpg" alt="" class="img img-fluid" />
                             <img src="img/meetings1.jpg" alt="" class="img img-fluid" />
                             <img src="img/meeting4.jpg" alt="" class="img img-fluid" />
+                        </div> -->
+                        <div class="container-fluid pt-2">
+                            <div class="owl-carousel service-carousel">
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-1.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-3.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-4.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-5.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-6.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-7.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-2.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-6.JPG" alt="">
+
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -527,11 +1314,51 @@
 
                 <div class="dropdown-content acc-content">
                     <div class="drop">
-                        <div>
+                        <!-- <div>
                             <img src="img/kitchen-1.JPG" class="img img-fluid" />
                             <img src="img/meeting2.jpg" alt="" class="img img-fluid" />
                             <img src="img/meetings1.jpg" alt="" class="img img-fluid" />
                             <img src="img/meeting4.jpg" alt="" class="img img-fluid" />
+                        </div> -->
+                        <div class="container-fluid pt-2">
+                            <div class="owl-carousel service-carousel">
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-1.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-3.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-4.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-5.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-6.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-7.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-2.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-6.JPG" alt="">
+
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -546,10 +1373,50 @@
 
                 <div class="dropdown-content acc-content">
                     <div class="drop">
-                        <div>
+                        <!-- <div>
                             <img src="img/kitchen-8.JPG" alt="" class="img img-fluid" />
                             <img src="img/meetings1.jpg" alt="" class="img img-fluid" />
                             <img src="img/meeting4.jpg" alt="" class="img img-fluid" />
+                        </div> -->
+                        <div class="container-fluid pt-2">
+                            <div class="owl-carousel service-carousel">
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-1.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-3.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-4.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-5.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-6.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-7.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-2.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-6.JPG" alt="">
+
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -564,12 +1431,52 @@
                 </div>
                 <div class="dropdown-content acc-content">
                     <div class="drop">
-                        <div>
+                        <!-- <div>
                             <img src="img/kitchen-12.JPG" class="img img-fluid" />
                             <img src="img/milkshakes1.jpg" alt="" class="img img-fluid" />
                             <img src="img/meeting2.jpg" alt="" class="img img-fluid" />
                             <img src="img/meetings1.jpg" alt="" class="img img-fluid" />
                             <img src="img/meeting4.jpg" alt="" class="img img-fluid" />
+                        </div> -->
+                        <div class="container-fluid pt-2">
+                            <div class="owl-carousel service-carousel">
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-1.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-3.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-4.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-5.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-6.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-7.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-2.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-6.JPG" alt="">
+
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -585,11 +1492,51 @@
 
                 <div class="dropdown-content acc-content">
                     <div class="drop">
-                        <div>
+                        <!-- <div>
                             <img src="img/kitchen-10.JPG" class="img img-fluid" />
                             <img src="img/meeting2.jpg" alt="" class="img img-fluid" />
                             <img src="img/meetings1.jpg" alt="" class="img img-fluid" />
                             <img src="img/meeting4.jpg" alt="" class="img img-fluid" />
+                        </div> -->
+                        <div class="container-fluid pt-2">
+                            <div class="owl-carousel service-carousel">
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-1.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-3.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-4.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-5.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-6.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-7.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-2.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-6.JPG" alt="">
+
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -604,11 +1551,51 @@
                 </div>
                 <div class="dropdown-content acc-content">
                     <div class="drop">
-                        <div>
+                        <!-- <div>
                             <img src="img/kitchen-11.JPG" alt="" class="img img-fluid" />
                             <img src="img/meeting2.jpg" alt="" class="img img-fluid" />
                             <img src="img/meetings1.jpg" alt="" class="img img-fluid" />
                             <img src="img/meeting4.jpg" alt="" class="img img-fluid" />
+                        </div> -->
+                        <div class="container-fluid pt-2">
+                            <div class="owl-carousel service-carousel">
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-1.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-3.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-4.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-5.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-6.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-7.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-2.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-6.JPG" alt="">
+
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -624,11 +1611,51 @@
                 </div>
                 <div class="dropdown-content acc-content">
                     <div class="drop">
-                        <div>
+                        <!-- <div>
                             <img src="img/kitchen-5.JPG" class="img img-fluid" />
                             <img src="img/meeting2.jpg" alt="" class="img img-fluid" />
                             <img src="img/meetings1.jpg" alt="" class="img img-fluid" />
                             <img src="img/meeting4.jpg" alt="" class="img img-fluid" />
+                        </div> -->
+                        <div class="container-fluid pt-2">
+                            <div class="owl-carousel service-carousel">
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-1.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-3.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-4.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-5.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-6.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-7.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-2.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-6.JPG" alt="">
+
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -643,11 +1670,51 @@
                 </div>
                 <div class="dropdown-content acc-content">
                     <div class="drop">
-                        <div>
+                        <!-- <div>
                             <img src="img/kitchen-6.JPG" class="img img-fluid" />
                             <img src="img/meeting2.jpg" alt="" class="img img-fluid" />
                             <img src="img/meetings1.jpg" alt="" class="img img-fluid" />
                             <img src="img/meeting4.jpg" alt="" class="img img-fluid" />
+                        </div> -->
+                        <div class="container-fluid pt-2">
+                            <div class="owl-carousel service-carousel">
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-1.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-3.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-4.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-5.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-6.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-7.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-2.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-6.JPG" alt="">
+
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -663,11 +1730,51 @@
                 </div>
                 <div class="dropdown-content acc-content">
                     <div class="drop">
-                        <div>
+                        <!-- <div>
                             <img src="img/kitchen-2.JPG" class="img img-fluid" />
                             <img src="img/meeting2.jpg" alt="" class="img img-fluid" />
                             <img src="img/meetings1.jpg" alt="" class="img img-fluid" />
                             <img src="img/meeting4.jpg" alt="" class="img img-fluid" />
+                        </div> -->
+                        <div class="container-fluid pt-2">
+                            <div class="owl-carousel service-carousel">
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-1.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-3.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-4.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-5.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-6.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-7.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-2.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-6.JPG" alt="">
+
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -683,12 +1790,52 @@
                 </div>
                 <div class="dropdown-content acc-content">
                     <div class="drop">
-                        <div>
+                        <!-- <div>
                             <img src="img/kitchen-3.JPG" class="img img-fluid" />
                             <img src="img/ice-cream1.jpg" alt="" class="img img-fluid" />
                             <img src="img/icecream2.jpg" alt="" class="img img-fluid" />
                             <img src="img/icecreams3.jpg" alt="" class="img img-fluid" />
 
+                        </div> -->
+                        <div class="container-fluid pt-2">
+                            <div class="owl-carousel service-carousel">
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-1.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-3.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-4.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-5.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-6.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-7.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-2.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-6.JPG" alt="">
+
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -703,11 +1850,51 @@
                 </div>
                 <div class="dropdown-content acc-content">
                     <div class="drop">
-                        <div>
+                        <!-- <div>
                             <img src="img/kitchen-4.JPG" class="img img-fluid" />
                             <img src="img/meeting2.jpg" alt="" class="img img-fluid" />
                             <img src="img/meetings1.jpg" alt="" class="img img-fluid" />
                             <img src="img/meeting4.jpg" alt="" class="img img-fluid" />
+                        </div> -->
+                        <div class="container-fluid pt-2">
+                            <div class="owl-carousel service-carousel">
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-1.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-3.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-4.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-5.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-6.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-7.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-2.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-6.JPG" alt="">
+
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -722,10 +1909,50 @@
 
                 <div class="dropdown-content acc-content">
                     <div class="drop">
-                        <div>
+                        <!-- <div>
                             <img src="img/screenings1.jpg" alt="" class="img img-fluid" />
                             <img src="img/screning2.jpg" alt="" class="img img-fluid" />
                             <img src="img/screening3.jpg" alt="" class="img img-fluid" />
+                        </div> -->
+                        <div class="container-fluid pt-2">
+                            <div class="owl-carousel service-carousel">
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-1.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-3.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-4.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-5.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-6.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-7.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-2.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-6.JPG" alt="">
+
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -740,10 +1967,50 @@
 
                 <div class="dropdown-content acc-content">
                     <div class="drop">
-                        <div>
+                        <!-- <div>
                             <img src="img/meeting2.jpg" alt="" class="img img-fluid" />
                             <img src="img/meetings1.jpg" alt="" class="img img-fluid" />
                             <img src="img/meeting4.jpg" alt="" class="img img-fluid" />
+                        </div> -->
+                        <div class="container-fluid pt-2">
+                            <div class="owl-carousel service-carousel">
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-1.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-3.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-4.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-5.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-6.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-7.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-2.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-6.JPG" alt="">
+
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -757,11 +2024,51 @@
 
                 <div class="dropdown-content acc-content">
                     <div class="drop">
-                        <div>
+                        <!-- <div>
                             <img src="img/dj.jpg" alt="" class="img img-fluid" />
                             <img src="img/dancing1.jpg" alt="" class="img img-fluid" />
                             <img src="img/entertaiment1.jpg" alt="" class="img img-fluid" />
                             <img src="img/entertainment2.jpg" alt="" class="img img-fluid" />
+                        </div> -->
+                        <div class="container-fluid pt-2">
+                            <div class="owl-carousel service-carousel">
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-1.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-3.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-4.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-5.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-6.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-7.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-2.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-6.JPG" alt="">
+
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -776,10 +2083,51 @@
 
                 <div class="dropdown-content acc-content">
                     <div class="drop">
-                        <div>
+                        <!-- <div>
                             <img src="img/meeting2.jpg" alt="" class="img img-fluid" />
                             <img src="img/meetings1.jpg" alt="" class="img img-fluid" />
                             <img src="img/meeting4.jpg" alt="" class="img img-fluid" />
+
+                        </div> -->
+                        <div class="container-fluid pt-2">
+                            <div class="owl-carousel service-carousel">
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-1.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-3.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-4.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-5.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-6.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-7.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-2.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-6.JPG" alt="">
+
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -794,10 +2142,50 @@
 
                 <div class="dropdown-content acc-content">
                     <div class="drop">
-                        <div>
+                        <!-- <div>
                             <img src="img/kids1.jpg" alt="" class="img img-fluid" />
                             <img src="img/kids2.jpg" alt="" class="img img-fluid" />
                             <img src="img/kids4.jpg" alt="" class="img img-fluid" />
+                        </div> -->
+                        <div class="container-fluid pt-2">
+                            <div class="owl-carousel service-carousel">
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-1.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-3.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-4.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-5.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-6.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-7.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-2.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-6.JPG" alt="">
+
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -812,11 +2200,51 @@
 
                 <div class="dropdown-content acc-content">
                     <div class="drop">
-                        <div>
+                        <!-- <div>
                             <img src="img/axe-throwing.JPG" alt="" class="img img-fluid" />
                             <video src="img/axeThrowing.mp4" width="300" height="300" autoplay muted>
 
                             </video>
+                        </div> -->
+                        <div class="container-fluid pt-2">
+                            <div class="owl-carousel service-carousel">
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-1.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-3.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-4.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-5.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-6.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-7.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-2.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-6.JPG" alt="">
+
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -831,9 +2259,49 @@
 
                 <div class="dropdown-content acc-content">
                     <div class="drop">
-                        <div>
+                        <!-- <div>
                             <img src="img/shoot1.jpg" alt="" class="img img-fluid" />
                             <img src="img/shoot2.jpg" alt="" class="img img-fluid" />
+                        </div> -->
+                        <div class="container-fluid pt-2">
+                            <div class="owl-carousel service-carousel">
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-1.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-3.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-4.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-5.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-6.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-7.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-2.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-6.JPG" alt="">
+
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -866,10 +2334,50 @@
 
                 <div class="dropdown-content acc-content">
                     <div class="drop">
-                        <div>
+                        <!-- <div>
                             <img src="img/crackers1.jpg" alt="" class="img img-fluid" />
                             <img src="img/crackers2.jpg" alt="" class="img img-fluid" />
                             <img src="img/crackers3.jpg" alt="" class="img img-fluid" />
+                        </div> -->
+                        <div class="container-fluid pt-2">
+                            <div class="owl-carousel service-carousel">
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-1.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-3.JPG" alt="" style="object-fit: cover;">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-4.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-5.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-6.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/gallery-7.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-2.JPG" alt="">
+
+                                </div>
+                                <div class="service-item position-relative">
+                                    <img class="img-fluid" src="img/about-background-6.JPG" alt="">
+
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -918,24 +2426,60 @@
         };
 
     </script>
+    <style>
+        .o,
+        .ot {
+            height: 600px;
+        }
 
+        @media(max-width:500px) {
+            .ot {
+                height: 100%;
+            }
+        }
+
+        .m {
+            font-size: 2rem;
+        }
+
+        .oh {
+            font-size: 2rem;
+        }
+
+        .oh1 {
+            font-size: 1.5rem;
+        }
+
+        @media(max-width:400px) {
+            .m {
+                font-size: 1.5rem;
+            }
+
+            .oh {
+                font-size: 1.5rem;
+            }
+
+            .oh1 {
+                font-size: 1rem;
+            }
+        }
+    </style>
     <!-- Open Hours Start -->
-    <div class="container-fluid py-5">
+    <div class="container-fluid">
         <div class="container py-5">
             <div class="row">
-                <div class="col-lg-6" style="min-height: 500px" data-aos="fade-up">
-                    <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100" src="img/gallery-2.png" style="object-fit: cover"
-                            class="img img-fluid" />
-                    </div>
+                <div class="col-lg-6 o" data-aos="fade-up">
+
+                    <img class="w-100" src="img/gallery-2.png" style="object-fit:contain;height: 100%;" />
+
                 </div>
-                <div class="col-lg-6 pt-5 pb-lg-5" data-aos="fade-up">
-                    <div class="hours-text bg-light p-4 p-lg-5 my-lg-5">
-                        <h6 class="d-inline-block text-white text-uppercase bg-primary py-1 px-2">
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div class="hours-text bg-light p-4 p-lg-5 ot" style="background-color: #4633a6;">
+                        <h1 class="d-inline-block text-white text-uppercase bg-primary py-1 px-2 oh">
                             Open Hours
-                        </h6>
-                        <h1 class="mb-4" style="font-size: 1.5rem;">Best Place to Enjoy</h1>
-                        <p style="color: #cc8b35;">
+                        </h1>
+                        <h6 class="mb-4 oh1">Best Place to Enjoy</h6>
+                        <p style="color:#22092c;">
                             In a broader sense, "drive-in" can refer to events or services
                             that cater to people who remain in their vehicles, such as
                             drive-in concerts, drive-in church services, or even drive-in
@@ -943,32 +2487,32 @@
                             way to maintain social distancing during the pandemic.
                         </p>
                         <ul class="list-inline">
-                            <li class="h6 py-1">
+                            <li class=" py-1">
                                 <i class="far fa-circle text-primary mr-3"></i>Monday : 12:00
                                 AM - 3:00 PM & 6:00 PM - 11:59 PM
                             </li>
-                            <li class="h6 py-1">
+                            <li class=" py-1">
                                 <i class="far fa-circle text-primary mr-3"></i>Tuesday : 12:00
                                 AM - 3:00 PM & 6:00 PM - 11:59 PM
                             </li>
-                            <li class="h6 py-1">
+                            <li class=" py-1">
                                 <i class="far fa-circle text-primary mr-3"></i>Wednesday :
                                 12:00
                                 AM - 3:00 PM & 6:00 PM - 11:59 PM
                             </li>
-                            <li class="h6 py-1">
+                            <li class=" py-1">
                                 <i class="far fa-circle text-primary mr-3"></i>Thursday :12:00
                                 AM - 3:00 PM & 6:00 PM - 11:59 PM
                             </li>
-                            <li class="h6 py-1">
+                            <li class=" py-1">
                                 <i class="far fa-circle text-primary mr-3"></i>Friday : 12:00
                                 AM - 3:00 PM & 6:00 PM - 11:59 PM
                             </li>
-                            <li class="h6 py-1">
+                            <li class=" py-1">
                                 <i class="far fa-circle text-primary mr-3"></i>Saturday : 12:00
                                 AM - 3:00 PM & 6:00 PM - 11:59 PM
                             </li>
-                            <li class="h6 py-1">
+                            <li class=" py-1">
                                 <i class="far fa-circle text-primary mr-3"></i>Sunday : 12:00
                                 AM - 3:00 PM & 6:00 PM - 11:59 PM
                             </li>
@@ -979,19 +2523,20 @@
         </div>
     </div>
     <!-- Open Hours End -->
+
     <!-- Appointment Start -->
-    <div class="container-fluid py-5"
+    <div class="container-fluid pt-3"
         style="background-image: url('img/event4.jpg');background-size: cover;background-position: center;">
-        <div class="container py-5">
+        <div class="container">
             <div class="row mx-0 justify-content-center text-center">
                 <div class="col-lg-6">
                     <!-- <h6 class="d-inline-block bg-light text-primary text-uppercase py-1 px-2">Appointment</h6> -->
-                    <h1 class="mb-1">
-                        Make An Appointment</h1>
+                    <h1 class="mb-1 m">
+                        Reserve Your Moment: Plan Your Appointment</h1>
                 </div>
             </div>
             <div class="row justify-content-center bg-appointment mx-0">
-                <div class="col-lg-6 py-5">
+                <div class="col-lg-6 py-2">
                     <div class="p-5 my-5" style="background: rgba(33, 30, 28, 0.7);">
                         <form id="bookingForm" class="bookingForm">
                             <div class="form-row">
@@ -1071,9 +2616,9 @@
         }
     </style>
     <!-- Footer Start -->
-    <div class="footer container-fluid position-relative py-5" id="footer">
+    <div class="footer container-fluid position-relative pt-5" id="footer">
         <!-- <div class="fimage"></div> -->
-        <div class="container pt-5">
+        <div class="container">
             <div class="row">
                 <div class="col-lg-6 pr-lg-5 mb-5">
                     <a href="home.html" class="navbar-brand">
@@ -1140,7 +2685,8 @@
                             </div>
                         </div>
                         <div class="col-sm-12 mb-5">
-                            <h5 class="text-white text-uppercase mb-4">Newsletter</h5>
+                            <h5 class="text-white text-uppercase mb-4" style="font-size: 2.5rem;font-family: none;">
+                                Newsletter</h5>
                             <div class="w-100">
                                 <div class="input-group">
                                     <input type="text" class="form-control border-light" style="padding: 30px"

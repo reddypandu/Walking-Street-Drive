@@ -21,12 +21,14 @@
   font-style: normal;
   font-display: swap;
 } */
-
+@font-face {
+  font-family: "Momcake";
+  src: url("/fonts/MomcakeBold-WyonA.otf") format("opentype");
+}
 @font-face {
   font-family: "Fontfabric nexa rust sans book 01";
   src: url("https://uploads-ssl.webflow.com/61f53606a22f7e1a572993f6/61f57a262f393942549f65be_Fontfabric - Nexa Rust Sans Book 01.otf")
     format("opentype");
-  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
@@ -444,7 +446,7 @@ h6,
 
 h1,
 .h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-family: "Fontfabric nexa rust sans shadow";
 }
 
@@ -716,8 +718,7 @@ pre code {
 .container-lg,
 .container-xl {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+
   margin-right: auto;
   margin-left: auto;
 }
@@ -759,8 +760,6 @@ pre code {
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
 }
 
 .no-gutters {
@@ -4385,23 +4384,18 @@ input[type="button"].btn-block {
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 1rem;
-  background-image: linear-gradient(90deg, #cc8b35 17%, #22092c 2%);
   width: 100%;
 }
-
 .navbar.active {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-image: linear-gradient(90deg, #cc8b35 17%, #22092c 2%);
 }
 @media (max-width: 990px) {
   .navbar {
-    background-image: linear-gradient(35deg, #cc8b35 38%, #22092c 2%);
   }
   .navbar.active {
-    background-image: linear-gradient(35deg, #cc8b35 38%, #22092c 2%);
   }
 }
 
@@ -4514,66 +4508,6 @@ input[type="button"].btn-block {
   background-size: 100% 100%;
 }
 
-.walk .cImg {
-  object-fit: cover;
-}
-#header-carousel {
-  height: 100vh;
-}
-.walk {
-  padding-bottom: 5rem;
-  margin-bottom: 5rem;
-}
-@media (max-width: 575px) {
-  .walk .cImg {
-    object-fit: scale-down;
-    max-width: 100%;
-    max-height: 60vh;
-  }
-  .walk {
-    object-fit: cover;
-    padding-bottom: 1rem;
-    margin-bottom: 0;
-  }
-  .na .logo {
-    width: 100px;
-  }
-  .navbar-light .navbar-toggler {
-    font-size: 10px;
-  }
-  .carousel-indicators li {
-    width: 40px;
-    height: 20px;
-  }
-  #header-carousel {
-    max-height: 60vh;
-  }
-}
-@media (max-width: 768px) {
-  .walk .cImg {
-    max-width: 100%;
-    max-height: 70vh;
-  }
-  .walk {
-    padding-bottom: 1rem;
-    margin-bottom: 0;
-  }
-  .na .logo {
-    width: 100px;
-  }
-  .navbar-light .navbar-toggler {
-    font-size: 10px;
-  }
-  .carousel-indicators li {
-    width: 40px;
-    height: 18px;
-  }
-  #header-carousel {
-    height: 70vh;
-  }
-  .carousel-item {
-  }
-}
 @media (max-width: 992px) {
   .navbar.active {
     position: fixed;
@@ -4585,9 +4519,6 @@ input[type="button"].btn-block {
   }
   .na {
     padding-top: 0.5rem;
-  }
-  .walk {
-    height: 100%;
   }
 }
 @media (max-width: 575.98px) {
@@ -4917,9 +4848,7 @@ input[type="button"].btn-block {
 .navbar-dark .navbar-text a:focus {
   color: #fff;
 }
-.walk {
-  z-index: -1;
-}
+
 .card {
   position: relative;
   display: flex;
@@ -6966,9 +6895,7 @@ button.bg-dark:focus {
 .d-table-row {
   display: table-row !important;
 }
-.Ci {
-  min-height: 100vh;
-}
+
 @media (max-width: 992px) {
   .T {
     display: none;
@@ -10236,7 +10163,7 @@ h6,
 
 .service-item img {
   position: relative;
-  margin-top: 40px;
+  margin-top: 10px;
   transition: 0.5s;
 }
 
@@ -10271,7 +10198,7 @@ h6,
   background-size: contain; */
 }
 .whp {
-  font-size: 25px;
+  font-size: 24px;
   font-weight: 800;
   color: white;
 }
@@ -10308,7 +10235,7 @@ h6,
 @media (min-width: 992px) {
   .hours-text,
   .pricing-text {
-    margin-left: -120px;
+    /* margin-left: -120px; */
   }
 }
 .team img {
