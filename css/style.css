@@ -10317,12 +10317,16 @@ h6,
   justify-content: center;
 }
 
-.back-to-top {
+a.back-to-top.top {
   position: fixed;
   display: none;
   right: 35px;
   bottom: 120px;
-  z-index: 11;
+  padding: 8px;
+  background-color: white;
+  border-radius: 50%;
+  z-index: 999;
+  box-shadow: 2px 2px 4px #cc8b35;
   animation: action 1s infinite alternate;
 }
 
