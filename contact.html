@@ -17,7 +17,7 @@
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -237,7 +237,7 @@
     <div class="container calender">
 
         <!-- <h1 class="text-center">CALENDER</h1> -->
-        <div id="calendar"></div>
+        <div id="calendar" data-aos="fade-up"></div>
     </div>
     <style>
         @media(max-width:575px) {
@@ -259,7 +259,7 @@
         }
     </style>
     <!-- Contact Start -->
-    <div class="container">
+    <div class="container" data-aos="fade-up">
         <div class="">
             <div class="contact-form bg-light p-4 p-lg-5 my-lg-5">
 
@@ -298,7 +298,7 @@
         </div>
     </div>
     <!-- Contact End -->
-    <div class="container map">
+    <div class="container map" data-aos="fade-up">
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.028927519886!2d78.38424647429409!3d17.458329500759305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91d11bf95e83%3A0xbf25fbbf624cee9f!2sWalking%20Street%20Drive-In!5e0!3m2!1sen!2sin!4v1700565442775!5m2!1sen!2sin"
             width="100%" height="600" allowfullscreen="" loading="lazy"
@@ -468,7 +468,10 @@
     <!-- Contact Javascript File -->
     <script src="mail/jqBootstrapValidation.min.js"></script>
     <script src="mail/contact.js"></script>
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     <!--chatbot script-->

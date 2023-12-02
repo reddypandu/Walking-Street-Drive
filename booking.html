@@ -17,7 +17,7 @@
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -240,7 +240,7 @@
 
     <div class="row justify-content-center bg-appointment mx-0"
         style="background-image: url('img/event4.jpg');background-size: cover;background-position: center;">
-        <div class="col-lg-6">
+        <div class="col-lg-6" data-aos="fade-up">
             <div class="p-5 my-5">
                 <h1 class="text-center mb-4 m">
                     Reserve Your Moment: Plan Your Appointment</h1>
@@ -551,7 +551,10 @@
     <!-- Contact Javascript File -->
     <script src="mail/jqBootstrapValidation.min.js"></script>
     <script src="mail/contact.js"></script>
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     <!--chatbot script-->

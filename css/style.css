@@ -4464,7 +4464,7 @@ input[type="button"].btn-block {
 
 .social-icons li {
   margin-right: 15px;
-  animation: s 3s linear 2;
+  animation: s 3s linear 1;
 }
 
 @keyframes s {
