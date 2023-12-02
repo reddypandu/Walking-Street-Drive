@@ -106,7 +106,9 @@ nav,
 section {
   display: block;
 }
-
+::selection {
+  background-color: #cc8b35;
+}
 body {
   margin: 0;
   font-family: "Lato", sans-serif;
@@ -2618,14 +2620,14 @@ fieldset:disabled a.btn {
 }
 
 .btn-primary:hover {
-  color: white;
+  color: #cc8b35;
   background-color: white;
   border-color: #f9df7a;
 }
 
 .btn-primary:focus,
 .btn-primary.focus {
-  color: white;
+  color: #cc8b35;
   background-color: #f9df7a;
   border-color: #f9df7a;
   box-shadow: 0 0 0 0.2rem rgba(217, 144, 130, 0.5);
