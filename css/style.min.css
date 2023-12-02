@@ -2219,7 +2219,7 @@ textarea.form-control.is-invalid {
   }
 }
 .btn:hover {
-  color: #cc8b35 m !important;
+  color: white !important;
   text-decoration: none;
 }
 .btn:focus,

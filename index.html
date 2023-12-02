@@ -165,11 +165,17 @@
         .nav-links li:hover {
             background-color: #cc8b35;
             color: white;
+            margin-top: 5px;
         }
 
         .nav-links li a {
             font-size: 16px;
             font-weight: 600;
+        }
+
+
+        .Logo:hover {
+            transform: scale(1.1);
         }
 
         .nav-links a {
@@ -194,6 +200,24 @@
 
         .social-icons li {
             margin-right: 15px;
+            animation: s 3s linear 2;
+        }
+
+        @keyframes s {
+            0% {
+                margin-top: -40px;
+                transform: rotate(360);
+            }
+
+            50% {
+                margin-top: -25px;
+                transform: rotate(90deg);
+            }
+
+            100% {
+                margin-top: 0;
+                transform: rotate(-90deg);
+            }
         }
 
         .social-icons a {
@@ -322,7 +346,7 @@
     </style>
     <div class="navbar">
         <div class="logo1">
-            <img src="img/logo_white.png" alt="Logo">
+            <img src="img/logo_white.png" alt="Logo" class="Logo">
         </div>
 
         <ul class="nav-links">
@@ -1179,7 +1203,7 @@
 
     <!-- About End -->
     <div class="container calender">
-        <h1 class="text-center" style="padding-top: 20px;">CALENDER</h1>
+        <h1 class="text-center" style="padding-top: 20px;font-size: 2.5rem;">CALENDER</h1>
         <div id="calendar"></div>
     </div>
 
@@ -1484,8 +1508,7 @@
                         </div>
                         <div class="form-row">
                             <div class="col-sm-12">
-                                <button class="btn btn-primary btn-block" type="submit"
-                                    style="height: 47px;background-color:#cc8b35;color: white;">Book A
+                                <button class="btn btn-primary btn-block" type="submit" style="height: 47px;">Book A
                                     Table</button>
                             </div>
                         </div>
@@ -1569,8 +1592,7 @@
                                     Us</a>
                                 <a class="text-white mb-2" href="entertainment.html"><i
                                         class="fa fa-angle-right mr-2"></i>Entertainment</a>
-                                <a class="text-white mb-2" href="gallery.html"><i
-                                        class="fa fa-angle-right mr-2"></i>Gallery</a>
+                                <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Gallery</a>
                                 <a class="text-white" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contact
                                     Us
                                 </a>
@@ -1579,13 +1601,18 @@
                         <div class="col-sm-6 mb-5">
                             <h5 class="text-white text-uppercase mb-4">In Our Drive-In</h5>
                             <div class="d-flex flex-column justify-content-start">
-                                <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Tasty
+                                <a class="text-white mb-2" href="whatwehost.html"><i
+                                        class="fa fa-angle-right mr-2"></i>Tasty
                                     Food</a>
-                                <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Drinks</a>
-                                <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Photoshoot</a>
-                                <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Good
+                                <a class="text-white mb-2" href="whatwehost.html"><i
+                                        class="fa fa-angle-right mr-2"></i>Drinks</a>
+                                <a class="text-white mb-2" href="whatwehost.html"><i
+                                        class="fa fa-angle-right mr-2"></i>Photoshoot</a>
+                                <a class="text-white mb-2" href="whatwehost.html"><i
+                                        class="fa fa-angle-right mr-2"></i>Good
                                     Environment</a>
-                                <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Games</a>
+                                <a class="text-white" href="entertainment.html"><i
+                                        class="fa fa-angle-right mr-2"></i>Games</a>
                             </div>
                         </div>
                         <div class="col-sm-12 mb-5">
@@ -1648,8 +1675,8 @@
         }
     </script>
     <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
+    <!-- <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script> -->
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
