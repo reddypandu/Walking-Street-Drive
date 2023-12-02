@@ -40,234 +40,10 @@
 <body>
 
     <!-- Topbar Start -->
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
 
-        .navbar {
-            background-color: #22092c;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0;
-        }
-
-        .logo1 {
-            width: 200px;
-            height: auto;
-            background-color: #cc8b35;
-            padding: 10px;
-        }
-
-        .logo1 img {
-            width: 100%;
-            height: 100%;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .nav-links li {
-            margin-right: 10px;
-            padding: 13px;
-            font-weight: 900;
-            -webkit-text-stroke-width: 0.2px;
-            text-transform: uppercase;
-            transition: all 1s ease-in-out;
-        }
-
-        .nav-links li.active {
-            background-color: #cc8b35;
-        }
-
-        .nav-links li:hover {
-            background-color: #cc8b35;
-            color: white;
-        }
-
-        .nav-links li a {
-            font-size: 16px;
-            font-weight: 600;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-            transition: color 0.3s ease-in-out;
-        }
-
-        .social-icons {
-            display: flex;
-            margin: 0;
-            padding: 0;
-        }
-
-        .social-icons ul {
-            display: flex;
-            flex-direction: row;
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .social-icons li {
-            margin-right: 15px;
-        }
-
-        .social-icons a {
-            text-decoration: none;
-            color: white;
-            font-size: 18px;
-        }
-
-        .menu-icon {
-            display: none;
-            font-size: 24px;
-            cursor: pointer;
-
-        }
-
-        @media (max-width: 992px) {
-            .menu-icon {
-                display: block;
-                margin-right: 20px;
-                font-size: 25px;
-                color: #cc8b35;
-            }
-
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 85px;
-                left: 0;
-                width: 100%;
-                background-color: #22092c;
-                padding: 10px;
-                z-index: 999;
-
-            }
-
-            /* @keyframes t {
-                0% {
-                    height: 0;
-                }
-
-                25% {
-                    height: 25%;
-                }
-
-                50% {
-                    height: 50%;
-                }
-
-                75% {
-                    height: 75%;
-                }
-
-                100% {
-                    height: 100%;
-                }
-            } */
-
-            .nav-links.show {
-                display: flex;
-
-            }
-
-            .nav-links li {
-                margin-right: 0;
-                margin-bottom: 10px;
-            }
-
-
-        }
-
-        @media(max-width:768px) {
-            .logo1 {
-                width: 180px;
-                min-height: 100%;
-                object-fit: scale-down;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: 2px;
-            }
-
-            .nav-links {
-                top: 80px;
-            }
-
-            .navbar {
-                height: 120px;
-            }
-        }
-
-        @media(max-width:520px) {
-            .logo1 {
-                width: 130px;
-                min-height: 100%;
-                object-fit: scale-down;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: 2px;
-            }
-
-            .nav-links {
-                top: 62px;
-            }
-
-            .navbar {
-                height: 100px;
-            }
-        }
-
-        @media(max-width:375px) {
-            .logo1 {
-                width: 82px;
-                min-height: 100%;
-                object-fit: scale-down;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: 2px;
-            }
-
-            .nav-links {
-                top: 45px;
-            }
-
-            .navbar {
-                height: 80px;
-            }
-        }
-
-        @media(max-width:320px) {
-            .logo1 {
-                width: 80px;
-                min-height: 100%;
-                object-fit: scale-down;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: 2px;
-            }
-
-            .navbar {
-                height: 60px;
-            }
-        }
-    </style>
 
     <div class="navbar">
-        <div class="logo1"><img src="img/logo_white.png" alt="Logo"></div>
+        <div class="logo1"><img src="img/logo_white.png" alt="Logo" class="Logo"></div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
@@ -279,16 +55,21 @@
         </ul>
         <div class="social-icons">
             <ul style="margin: 0;">
-                <li><a href="tel:+9196529
- 03485"><i class=" fas fa-phone-alt"></i></a></li>
-                <li><a
-                        href="https://www.google.com/maps/dir/?api=1&destination=Walking+Street+Drive-In&dir_action=navigate"><i
-                            class="fas fa-map-marker-alt"></i></a></li>
-                <li><a href="https://www.instagram.com/walkingstreet_hyderabad/?hl=en"><i
-                            class="fab fa-instagram"></i></a></li>
                 <li><a href="https://www.facebook.com/profile.php?id=100089117764083"><i
                             class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://www.instagram.com/walkingstreet_hyderabad/?hl=en"><i
+                            class="fab fa-instagram"></i></a></li>
                 <li><a href="https://www.youtube.com/@walkingstreet6793"><i class="fab fa-youtube"></i></a></li>
+
+                <li><a
+                        href="https://www.google.com/maps/dir/?api=1&destination=Walking+Street+Drive-In&dir_action=navigate">
+                        <i class="fas fa-map-marker-alt"></i></a></li>
+
+
+                <li><a href="tel:+9196529
+                            03485"><i class="fas fa-phone-alt"></i></a></li>
+
+
             </ul>
         </div>
         <div class="menu-icon">&#9776;
