@@ -2588,7 +2588,7 @@ textarea.form-control.is-invalid {
 }
 
 .btn:hover {
-  color: white !important;
+  color: #cc8b35 !important;
   text-decoration: none;
   background-color: white;
 }

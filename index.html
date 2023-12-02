@@ -151,7 +151,9 @@
 
         .nav-links li {
             margin-right: 10px;
-            padding: 15px;
+            padding: 13px;
+            font-weight: 900;
+            -webkit-text-stroke-width: 0.2px;
             text-transform: uppercase;
             transition: all 1s ease-in-out;
         }
@@ -166,7 +168,7 @@
         }
 
         .nav-links li a {
-            font-size: 15px;
+            font-size: 16px;
             font-weight: 600;
         }
 
@@ -265,36 +267,76 @@
         @media(max-width:768px) {
             .logo1 {
                 width: 180px;
+                min-height: 100%;
+                object-fit: scale-down;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 2px;
             }
 
             .nav-links {
                 top: 80px;
+            }
+
+            .navbar {
+                height: 120px;
             }
         }
 
         @media(max-width:520px) {
             .logo1 {
                 width: 130px;
+                min-height: 100%;
+                object-fit: scale-down;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 2px;
             }
 
             .nav-links {
                 top: 62px;
             }
+
+            .navbar {
+                height: 100px;
+            }
         }
 
         @media(max-width:375px) {
             .logo1 {
-                width: 80px;
+                width: 82px;
+                min-height: 100%;
+                object-fit: scale-down;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 2px;
             }
 
             .nav-links {
                 top: 45px;
+            }
+
+            .navbar {
+                height: 80px;
             }
         }
 
         @media(max-width:320px) {
             .logo1 {
                 width: 80px;
+                min-height: 100%;
+                object-fit: scale-down;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 2px;
+            }
+
+            .navbar {
+                height: 60px;
             }
         }
     </style>
@@ -306,7 +348,7 @@
         <ul class="nav-links">
             <li class="active"><a href="#">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
+            <!-- <li><a href="gallery.html">Gallery</a></li> -->
             <li><a href="entertainment.html">Games</a></li>
             <li><a href="whatwehost.html">What We Host</a></li>
             <li><a href="booking.html">Bookings</a></li>
@@ -1489,6 +1531,11 @@
             background-position: center;
         }
     </style>
+    <!-- <form action="subscribe.php" method="post">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <button type="submit">Subscribe</button>
+    </form> -->
     <!-- Footer Start -->
     <div class="footer container-fluid position-relative py-2" id="footer">
         <!-- <div class="fimage"></div> -->
@@ -1651,6 +1698,7 @@
             s1.charset = 'UTF-8';
             s1.setAttribute('crossorigin', '*');
             s0.parentNode.insertBefore(s1, s0);
+
         })();
     </script>
     <!--End of Tawk.to Script-->
