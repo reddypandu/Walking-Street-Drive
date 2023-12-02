@@ -120,6 +120,7 @@ body {
   /* background-color:#151e27; */
   background-color: black;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -10317,7 +10318,7 @@ h6,
   justify-content: center;
 }
 
-a.back-to-top.top {
+a.back-to-t {
   position: fixed;
   display: none;
   right: 35px;
