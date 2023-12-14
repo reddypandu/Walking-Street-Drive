@@ -170,3 +170,33 @@ a.forEach((item) => {
     }
   });
 });
+//remove .html extension when hover
+// document.addEventListener("DOMContentLoaded", function () {
+//   const navLinks = document.querySelectorAll(".nav-links a");
+
+//   navLinks.forEach((link) => {
+//     link.addEventListener("mouseover", function () {
+//       const originalHref = link.getAttribute("href");
+//       const cleanHref = originalHref.replace(".html", "");
+//       link.setAttribute("href", cleanHref);
+//     });
+
+//     link.addEventListener("mouseout", function () {
+//       const originalHref = link.getAttribute("href");
+//       const restoreHref = originalHref + ".html";
+//       link.setAttribute("href", restoreHref);
+//     });
+//   });
+// });
+
+//loader script
+document.addEventListener("DOMContentLoaded", function () {
+  // Show loading spinner
+  document.getElementById("preloader").style.display = "block";
+
+  // Add an event listener for when the page has finished loading
+  window.addEventListener("load", function () {
+    // Hide loading spinner when the page has finished loading
+    document.getElementById("preloader").style.display = "none";
+  });
+});

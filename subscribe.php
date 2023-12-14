@@ -1,26 +1,35 @@
 <?php
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Get the submitted email
-    $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
+    // Collect form data
+    $name = strip_tags(htmlspecialchars($_POST['name']));
+    $email = strip_tags(htmlspecialchars($_POST['email']));
+    $subject = strip_tags(htmlspecialchars($_POST['subject']));
+    $message = strip_tags(htmlspecialchars($_POST['message']));
 
-    // Validate the email
-    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        // Process the subscription (you might store it in a database)
+    // Set recipient email address
+    $to = "pandureddypatterns@gmail.com"; // Replace with your email address
 
-        // Send an email notification
-        $to = "pandureddypatterns@gmail.com"; // Replace with your email address
-        $subject = "New Newsletter Subscription";
-        $message = "A new user subscribed to the newsletter.\nEmail: $email";
-        $headers = "From: pandureddypatterns@gmail.com"; // Replace with your email or use a valid one
+    // Set email subject
+    $email_subject = "New Contact Form Submission: $subject";
 
-        mail($to, $subject, $message, $headers);
+    // Compose email body
+    $email_body = "You have received a new message from your website contact form.\n\n"
+        . "Name: $name\n"
+        . "Email: $email\n"
+        . "Subject: $subject\n"
+        . "Message:\n$message";
 
-        // You can also use third-party libraries like PHPMailer for better email handling
+    // Set headers
+    $headers = "From: $email\r\n";
+    $headers .= "Reply-To: $email\r\n";
 
-        echo "Subscription successful. Thank you!";
+    // Send email
+    if (mail($to, $email_subject, $email_body, $headers)) {
+        echo "Success! Your message has been sent.";
     } else {
-        echo "Invalid email address. Please try again.";
+        echo "Error! Unable to send message.";
     }
+} else {
+    // Handle invalid form submission
+    echo "Invalid form submission.";
 }
