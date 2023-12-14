@@ -21,10 +21,10 @@
   font-style: normal;
   font-display: swap;
 } */
-@font-face {
+/* @font-face {
   font-family: "Momcake";
   src: url("/fonts/MomcakeBold-WyonA.otf") format("opentype");
-}
+} */
 @font-face {
   font-family: "Fontfabric nexa rust sans book 01";
   src: url("https://uploads-ssl.webflow.com/61f53606a22f7e1a572993f6/61f57a262f393942549f65be_Fontfabric - Nexa Rust Sans Book 01.otf")
@@ -4566,7 +4566,7 @@ input[type="button"].btn-block {
     left: 0;
     width: 100%;
     background-color: #22092c;
-    padding: 10px;
+    /* padding: 10px; */
     z-index: 999;
   }
 
